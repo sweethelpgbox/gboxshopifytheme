@@ -1,0 +1,80 @@
+<section class="section features-section" id="features-{{ section.id }}">
+  <div class="container">
+
+    <div class="features-grid">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'feature' -%}
+          <div class="feature-card" {{ block.shopify_attributes }}>
+            <div class="feature-icon">
+              {%- case block.settings.icon -%}
+                {%- when 'truck' -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                {%- when 'return' -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v6h6"/><path d="M3 8a9 9 0 1 0 2.25-5.5L3 8"/></svg>
+                {%- when 'shield' -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                {%- when 'star' -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                {%- else -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              {%- endcase -%}
+            </div>
+            <div class="feature-title">{{ block.settings.title }}</div>
+            <div class="feature-desc">{{ block.settings.description }}</div>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Features / USP",
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "truck",   "label": "Truck / Shipping" },
+            { "value": "return",  "label": "Return" },
+            { "value": "shield",  "label": "Shield / Security" },
+            { "value": "star",    "label": "Star / Quality" },
+            { "value": "check",   "label": "Check" }
+          ],
+          "default": "check"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Free Shipping"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Free standard shipping on all orders over $75."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Features / USP",
+      "blocks": [
+        { "type": "feature", "settings": { "icon": "truck",  "title": "Free Shipping",     "description": "Free standard shipping on orders over $75. Express available at checkout." } },
+        { "type": "feature", "settings": { "icon": "return", "title": "Easy Returns",       "description": "Not happy? Return any item within 30 days, hassle-free." } },
+        { "type": "feature", "settings": { "icon": "shield", "title": "Secure Payments",    "description": "Your payment info is always protected with 256-bit SSL encryption." } },
+        { "type": "feature", "settings": { "icon": "star",   "title": "Quality Guaranteed", "description": "Every product is curated and tested by our team before it hits the shelves." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

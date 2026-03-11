@@ -1,0 +1,25 @@
+{%- if section.settings.show_announcement -%}
+<div class="announcement-bar" role="complementary" aria-label="Announcement">
+  {{ section.settings.text }}
+</div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_announcement",
+      "label": "Show announcement",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Announcement text",
+      "default": "<p>Free shipping on orders over $75 &nbsp;·&nbsp; <a href='/collections/all'>Shop now →</a></p>"
+    }
+  ]
+}
+{% endschema %}

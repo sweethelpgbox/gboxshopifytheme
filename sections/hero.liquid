@@ -1,0 +1,177 @@
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- Content -->
+      <div class="hero-content">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="hero-eyebrow">{{ section.settings.eyebrow }}</p>
+        {%- endif -%}
+
+        <h1 class="hero-heading">
+          {{ section.settings.heading | replace: '<em>', '<span class="highlight">' | replace: '</em>', '</span>' }}
+        </h1>
+
+        {%- if section.settings.subheading != blank -%}
+          <p class="hero-body">{{ section.settings.subheading }}</p>
+        {%- endif -%}
+
+        <div class="hero-cta">
+          {%- if section.settings.cta_primary_label != blank -%}
+            <a href="{{ section.settings.cta_primary_url }}" class="btn btn-primary">
+              {{ section.settings.cta_primary_label }}
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          {%- endif -%}
+          {%- if section.settings.cta_secondary_label != blank -%}
+            <a href="{{ section.settings.cta_secondary_url }}" class="btn btn-secondary">
+              {{ section.settings.cta_secondary_label }}
+            </a>
+          {%- endif -%}
+        </div>
+
+        <!-- Stats -->
+        {%- if section.settings.show_stats -%}
+          <div class="hero-stats">
+            <div>
+              <div class="hero-stat-value">{{ section.settings.stat_1_value }}</div>
+              <div class="hero-stat-label">{{ section.settings.stat_1_label }}</div>
+            </div>
+            <div>
+              <div class="hero-stat-value">{{ section.settings.stat_2_value }}</div>
+              <div class="hero-stat-label">{{ section.settings.stat_2_label }}</div>
+            </div>
+            <div>
+              <div class="hero-stat-value">{{ section.settings.stat_3_value }}</div>
+              <div class="hero-stat-label">{{ section.settings.stat_3_label }}</div>
+            </div>
+          </div>
+        {%- endif -%}
+      </div><!-- /.hero-content -->
+
+      <!-- Media collage -->
+      <div class="hero-media" aria-hidden="true">
+        <div class="hero-media-card">
+          {%- if section.settings.hero_image_1 != blank -%}
+            {{ section.settings.hero_image_1 | image_url: width: 600 | image_tag: loading: 'eager', class: '' }}
+          {%- else -%}
+            <div class="placeholder" style="height:100%;display:flex;align-items:center;justify-content:center;color:var(--color-text-light);font-size:0.85rem;">{{ 'product-1' | placeholder_svg_tag }}</div>
+          {%- endif -%}
+        </div>
+        <div class="hero-media-card">
+          {%- if section.settings.hero_image_2 != blank -%}
+            {{ section.settings.hero_image_2 | image_url: width: 600 | image_tag: loading: 'eager' }}
+          {%- else -%}
+            <div class="placeholder" style="height:100%;display:flex;align-items:center;justify-content:center;color:var(--color-text-light);font-size:0.85rem;">{{ 'product-2' | placeholder_svg_tag }}</div>
+          {%- endif -%}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow text",
+      "default": "New Collection"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading (use <em> for accent color)",
+      "default": "<p>Gear Up for <em>Epic</em> Adventures</p>"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Discover our latest collection of premium gear built for performance and style."
+    },
+    {
+      "type": "text",
+      "id": "cta_primary_label",
+      "label": "Primary CTA label",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "cta_primary_url",
+      "label": "Primary CTA link"
+    },
+    {
+      "type": "text",
+      "id": "cta_secondary_label",
+      "label": "Secondary CTA label",
+      "default": "See TikTok Videos"
+    },
+    {
+      "type": "url",
+      "id": "cta_secondary_url",
+      "label": "Secondary CTA link"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_stats",
+      "label": "Show stats",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "stat_1_value",
+      "label": "Stat 1 value",
+      "default": "50K+"
+    },
+    {
+      "type": "text",
+      "id": "stat_1_label",
+      "label": "Stat 1 label",
+      "default": "Happy customers"
+    },
+    {
+      "type": "text",
+      "id": "stat_2_value",
+      "label": "Stat 2 value",
+      "default": "4.9★"
+    },
+    {
+      "type": "text",
+      "id": "stat_2_label",
+      "label": "Stat 2 label",
+      "default": "Average rating"
+    },
+    {
+      "type": "text",
+      "id": "stat_3_value",
+      "label": "Stat 3 value",
+      "default": "1M+"
+    },
+    {
+      "type": "text",
+      "id": "stat_3_label",
+      "label": "Stat 3 label",
+      "default": "TikTok views"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image_1",
+      "label": "Hero image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image_2",
+      "label": "Hero image 2"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero"
+    }
+  ]
+}
+{% endschema %}
