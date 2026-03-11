@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GBOX — Light Theme Preview</title>
+<title>G-Box Freeze Dried Candy — Light Theme Preview</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,6 +20,9 @@
   --color-text:       #1a1714;
   --color-text-muted: #6b6560;
   --color-text-light: #9e9890;
+  --color-brand:      #217a1e;
+  --color-brand-dark: #175916;
+  --color-brand-light:#e8f5e6;
   --color-accent:     #ff2d55;
   --color-accent-2:   #00c2cb;
   --color-accent-dark:#d91e45;
@@ -41,24 +44,26 @@ button{font:inherit;cursor:pointer;border:none;background:none}
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .section-title{font-size:clamp(1.5rem,3vw,2.25rem);font-weight:700;letter-spacing:-.03em;color:var(--color-text)}
 .section-title span{color:var(--color-accent)}
-.badge{display:inline-flex;align-items:center;gap:6px;background:var(--color-accent);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:var(--radius-full);margin-bottom:12px}
+.badge{display:inline-flex;align-items:center;gap:6px;background:var(--color-brand);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:var(--radius-full);margin-bottom:12px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:var(--radius-full);font-size:.9rem;font-weight:600;transition:all var(--transition);cursor:pointer;white-space:nowrap}
-.btn-primary{background:var(--color-accent);color:#fff;box-shadow:0 4px 16px rgba(255,45,85,.3)}
-.btn-primary:hover{background:var(--color-accent-dark);transform:translateY(-1px);box-shadow:0 6px 20px rgba(255,45,85,.4)}
+.btn-primary{background:var(--color-brand);color:#fff;box-shadow:0 4px 16px rgba(33,122,30,.3)}
+.btn-primary:hover{background:var(--color-brand-dark);transform:translateY(-1px);box-shadow:0 6px 20px rgba(33,122,30,.4)}
 .btn-secondary{background:var(--color-bg-muted);color:var(--color-text);border:1px solid var(--color-border)}
 .btn-secondary:hover{background:var(--color-border)}
-.btn-outline{background:transparent;color:var(--color-accent);border:2px solid var(--color-accent)}
-.btn-outline:hover{background:var(--color-accent);color:#fff}
+.btn-outline{background:transparent;color:var(--color-brand);border:2px solid var(--color-brand)}
+.btn-outline:hover{background:var(--color-brand);color:#fff}
 
 /* Announcement bar */
-.announcement-bar{background:linear-gradient(90deg,var(--color-accent),var(--color-accent-2));color:#fff;text-align:center;padding:9px var(--gutter);font-size:.82rem;font-weight:500;letter-spacing:.02em}
+.announcement-bar{background:linear-gradient(90deg,var(--color-brand),#2ea829);color:#fff;text-align:center;padding:9px var(--gutter);font-size:.82rem;font-weight:500;letter-spacing:.02em}
 .announcement-bar a{color:#fff;text-decoration:underline;text-underline-offset:2px}
 
 /* Header */
 .site-header{position:sticky;top:0;z-index:100;background:rgba(247,245,242,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--color-border)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:24px}
-.nav-logo{font-size:1.35rem;font-weight:800;letter-spacing:-.04em;color:var(--color-text);flex-shrink:0}
-.nav-logo .logo-dot{color:var(--color-accent)}
+.nav-logo{display:flex;align-items:center;flex-shrink:0}
+.nav-logo img{height:44px;width:44px;border-radius:50%;object-fit:cover;display:block}
+.nav-logo-text{font-size:1.1rem;font-weight:800;letter-spacing:-.03em;color:var(--color-text);margin-left:10px;line-height:1.1}
+.nav-logo-sub{font-size:.65rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-text-muted)}
 .nav-links{display:flex;align-items:center;gap:4px;flex:1;justify-content:center}
 .nav-links a{padding:6px 14px;border-radius:var(--radius-full);font-size:.9rem;font-weight:500;color:var(--color-text-muted);transition:all var(--transition)}
 .nav-links a:hover,.nav-links a.active{background:var(--color-bg-muted);color:var(--color-text)}
@@ -71,10 +76,10 @@ button{font:inherit;cursor:pointer;border:none;background:none}
 .hero{padding:clamp(48px,8vw,96px) 0;overflow:hidden}
 .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px);align-items:center}
 .hero-content{max-width:560px}
-.hero-eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent);margin-bottom:16px;display:flex;align-items:center;gap:8px}
-.hero-eyebrow::before{content:'';display:block;width:24px;height:2px;background:var(--color-accent);border-radius:2px}
+.hero-eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-brand);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.hero-eyebrow::before{content:'';display:block;width:24px;height:2px;background:var(--color-brand);border-radius:2px}
 .hero-heading{font-size:clamp(2.4rem,5vw,4rem);font-weight:800;letter-spacing:-.04em;line-height:1.1;margin-bottom:20px}
-.hero-heading .highlight{color:var(--color-accent)}
+.hero-heading .highlight{color:var(--color-brand)}
 .hero-body{font-size:1.1rem;color:var(--color-text-muted);margin-bottom:32px;max-width:440px}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:48px}
 .hero-stats{display:flex;gap:32px}
@@ -110,7 +115,7 @@ button{font:inherit;cursor:pointer;border:none;background:none}
 .product-card-media.p3{background:linear-gradient(135deg,#e8f5e9,#c8e6c9)}
 .product-card-media.p4{background:linear-gradient(135deg,#e3f2fd,#bbdefb)}
 .product-card-media svg{width:72px;height:72px;opacity:.2;color:var(--color-text)}
-.product-card-badge{position:absolute;top:12px;left:12px;background:var(--color-accent);color:#fff;font-size:.7rem;font-weight:700;padding:3px 8px;border-radius:var(--radius-full);text-transform:uppercase;letter-spacing:.06em}
+.product-card-badge{position:absolute;top:12px;left:12px;background:var(--color-brand);color:#fff;font-size:.7rem;font-weight:700;padding:3px 8px;border-radius:var(--radius-full);text-transform:uppercase;letter-spacing:.06em}
 .product-card-body{padding:16px}
 .product-card-vendor{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--color-text-light);margin-bottom:4px}
 .product-card-title{font-size:.95rem;font-weight:600;color:var(--color-text);margin-bottom:8px;line-height:1.3}
@@ -123,7 +128,7 @@ button{font:inherit;cursor:pointer;border:none;background:none}
 .features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .feature-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:28px 24px;display:flex;flex-direction:column;gap:12px;transition:all var(--transition)}
 .feature-card:hover{border-color:var(--color-accent);box-shadow:0 8px 24px var(--color-card-shadow)}
-.feature-icon{width:48px;height:48px;background:rgba(255,45,85,.08);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--color-accent)}
+.feature-icon{width:48px;height:48px;background:rgba(33,122,30,.1);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--color-brand)}
 .feature-title{font-size:1rem;font-weight:700;color:var(--color-text)}
 .feature-desc{font-size:.875rem;color:var(--color-text-muted);line-height:1.5}
 
@@ -172,11 +177,11 @@ button{font:inherit;cursor:pointer;border:none;background:none}
 .footer-brand-desc{font-size:.9rem;color:var(--color-text-muted);margin:12px 0 20px;max-width:280px;line-height:1.7}
 .footer-social{display:flex;gap:8px}
 .footer-social-link{width:38px;height:38px;border-radius:var(--radius-full);background:var(--color-bg-muted);border:1px solid var(--color-border);display:flex;align-items:center;justify-content:center;color:var(--color-text-muted);transition:all var(--transition)}
-.footer-social-link:hover{background:var(--color-accent);color:#fff;border-color:var(--color-accent)}
+.footer-social-link:hover{background:var(--color-brand);color:#fff;border-color:var(--color-brand)}
 .footer-col-title{font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--color-text);margin-bottom:16px}
 .footer-links{display:flex;flex-direction:column;gap:10px}
 .footer-links a{font-size:.9rem;color:var(--color-text-muted);transition:color var(--transition)}
-.footer-links a:hover{color:var(--color-accent)}
+.footer-links a:hover{color:var(--color-brand)}
 .footer-bottom{border-top:1px solid var(--color-border);padding:20px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .footer-legal{font-size:.82rem;color:var(--color-text-light)}
 .footer-payment-icons{display:flex;gap:8px;align-items:center}
@@ -207,13 +212,19 @@ button{font:inherit;cursor:pointer;border:none;background:none}
 
 <!-- ===== ANNOUNCEMENT BAR ===== -->
 <div class="announcement-bar">
-  Free shipping on orders over $75 &nbsp;·&nbsp; <a href="#">Shop now →</a>
+  🍬 Free shipping on orders over $40 &nbsp;·&nbsp; Freeze-dried candy made in the USA &nbsp;·&nbsp; <a href="#">Shop now →</a>
 </div>
 
 <!-- ===== HEADER ===== -->
 <header class="site-header">
   <div class="container nav-inner">
-    <a href="#" class="nav-logo">G<span class="logo-dot">BOX</span></a>
+    <a href="#" class="nav-logo" aria-label="G-Box Freeze Dried Candy">
+      <img src="assets/logo.svg" alt="G-Box Freeze Dried Candy logo" style="height:44px;width:44px;border-radius:50%;">
+      <div style="margin-left:10px;line-height:1.15">
+        <div style="font-size:1rem;font-weight:800;letter-spacing:-.03em;color:var(--color-text)">G-BOX</div>
+        <div style="font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--color-text-muted)">Freeze Dried Candy</div>
+      </div>
+    </a>
 
     <nav class="nav-links">
       <a href="#" class="active">Home</a>
@@ -243,15 +254,15 @@ button{font:inherit;cursor:pointer;border:none;background:none}
   <div class="container">
     <div class="hero-inner">
       <div class="hero-content">
-        <p class="hero-eyebrow">New Collection</p>
-        <h1 class="hero-heading">Gear Up for <span class="highlight">Epic</span> Adventures</h1>
-        <p class="hero-body">Discover our latest collection of premium gear built for performance and style. As seen all over TikTok.</p>
+        <p class="hero-eyebrow">Trending on TikTok 🍬</p>
+        <h1 class="hero-heading">Candy Like You've <span class="highlight">Never Tasted</span> Before</h1>
+        <p class="hero-body">Freeze-dried classics turned into light, crunchy, melt-in-your-mouth bites. Bold flavor. Zero guilt. All the fun.</p>
         <div class="hero-cta">
           <a href="#" class="btn btn-primary">
-            Shop Now
+            Shop Candy
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
-          <a href="#tiktok" class="btn btn-secondary">See TikTok Videos</a>
+          <a href="#tiktok" class="btn btn-secondary">Watch TikTok Videos</a>
         </div>
         <div class="hero-stats">
           <div>
@@ -263,7 +274,7 @@ button{font:inherit;cursor:pointer;border:none;background:none}
             <div class="hero-stat-label">Average rating</div>
           </div>
           <div>
-            <div class="hero-stat-value">1M+</div>
+            <div class="hero-stat-value">2M+</div>
             <div class="hero-stat-label">TikTok views</div>
           </div>
         </div>
@@ -290,10 +301,9 @@ button{font:inherit;cursor:pointer;border:none;background:none}
 <!-- ===== MARQUEE ===== -->
 <div class="marquee-section" aria-hidden="true">
   <div class="marquee-track" id="marquee">
-    <span class="marquee-item">Free Shipping Over $75<span class="sep">✦</span>Easy 30-Day Returns<span class="sep">✦</span>Trending on TikTok<span class="sep">✦</span>New Drops Weekly<span class="sep">✦</span></span>
-    <span class="marquee-item">Free Shipping Over $75<span class="sep">✦</span>Easy 30-Day Returns<span class="sep">✦</span>Trending on TikTok<span class="sep">✦</span>New Drops Weekly<span class="sep">✦</span></span>
-    <span class="marquee-item">Free Shipping Over $75<span class="sep">✦</span>Easy 30-Day Returns<span class="sep">✦</span>Trending on TikTok<span class="sep">✦</span>New Drops Weekly<span class="sep">✦</span></span>
-    <span class="marquee-item">Free Shipping Over $75<span class="sep">✦</span>Easy 30-Day Returns<span class="sep">✦</span>Trending on TikTok<span class="sep">✦</span>New Drops Weekly<span class="sep">✦</span></span>
+    <span class="marquee-item">Free Shipping Over $40<span class="sep">✦</span>Made in the USA 🇺🇸<span class="sep">✦</span>Trending on TikTok 🍬<span class="sep">✦</span>New Flavors Weekly<span class="sep">✦</span>30-Day Satisfaction Guarantee<span class="sep">✦</span></span>
+    <span class="marquee-item">Free Shipping Over $40<span class="sep">✦</span>Made in the USA 🇺🇸<span class="sep">✦</span>Trending on TikTok 🍬<span class="sep">✦</span>New Flavors Weekly<span class="sep">✦</span>30-Day Satisfaction Guarantee<span class="sep">✦</span></span>
+    <span class="marquee-item">Free Shipping Over $40<span class="sep">✦</span>Made in the USA 🇺🇸<span class="sep">✦</span>Trending on TikTok 🍬<span class="sep">✦</span>New Flavors Weekly<span class="sep">✦</span>30-Day Satisfaction Guarantee<span class="sep">✦</span></span>
   </div>
 </div>
 
@@ -302,9 +312,9 @@ button{font:inherit;cursor:pointer;border:none;background:none}
   <div class="container">
     <header class="section-header">
       <div>
-        <span class="badge">🔥 Trending</span>
-        <h2 class="section-title">Shop the <span>Drop</span></h2>
-        <p class="section-subtitle">As seen on TikTok — grab yours before it sells out.</p>
+        <span class="badge">🍬 Fan Favorites</span>
+        <h2 class="section-title">Bestselling <span>Flavors</span></h2>
+        <p class="section-subtitle">As seen on TikTok — freeze-dried and gone in seconds.</p>
       </div>
       <a href="#" class="btn btn-outline">View all products</a>
     </header>
@@ -316,11 +326,11 @@ button{font:inherit;cursor:pointer;border:none;background:none}
           <span class="product-card-badge">-25%</span>
         </div>
         <div class="product-card-body">
-          <p class="product-card-vendor">GBOX</p>
-          <h3 class="product-card-title">Pro Adventure Pack</h3>
+          <p class="product-card-vendor">G-Box</p>
+          <h3 class="product-card-title">Rainbow Skittles Mix</h3>
           <div class="product-card-price">
-            <span class="price-current">$74.99</span>
-            <span class="price-compare">$99.99</span>
+            <span class="price-current">$12.99</span>
+            <span class="price-compare">$17.99</span>
             <span class="price-save">Save 25%</span>
           </div>
         </div>
@@ -332,10 +342,10 @@ button{font:inherit;cursor:pointer;border:none;background:none}
           <span class="product-card-badge" style="background:var(--color-accent-2)">New</span>
         </div>
         <div class="product-card-body">
-          <p class="product-card-vendor">GBOX</p>
-          <h3 class="product-card-title">Urban Explorer Tee</h3>
+          <p class="product-card-vendor">G-Box</p>
+          <h3 class="product-card-title">Sour Patch Kids — Freeze Dried</h3>
           <div class="product-card-price">
-            <span class="price-current">$38.00</span>
+            <span class="price-current">$10.99</span>
           </div>
         </div>
       </article>
@@ -345,10 +355,10 @@ button{font:inherit;cursor:pointer;border:none;background:none}
           <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.18"><rect x="3" y="3" width="18" height="18" rx="3"/></svg>
         </div>
         <div class="product-card-body">
-          <p class="product-card-vendor">GBOX</p>
-          <h3 class="product-card-title">Trail Blazer Shorts</h3>
+          <p class="product-card-vendor">G-Box</p>
+          <h3 class="product-card-title">Gummy Bears — Freeze Dried</h3>
           <div class="product-card-price">
-            <span class="price-current">$52.00</span>
+            <span class="price-current">$9.99</span>
           </div>
         </div>
       </article>
@@ -359,8 +369,8 @@ button{font:inherit;cursor:pointer;border:none;background:none}
           <span class="product-card-badge">-15%</span>
         </div>
         <div class="product-card-body">
-          <p class="product-card-vendor">GBOX</p>
-          <h3 class="product-card-title">Summit Cap</h3>
+          <p class="product-card-vendor">G-Box</p>
+          <h3 class="product-card-title">Mystery Sampler Box</h3>
           <div class="product-card-price">
             <span class="price-current">$25.49</span>
             <span class="price-compare">$29.99</span>
@@ -591,8 +601,8 @@ button{font:inherit;cursor:pointer;border:none;background:none}
 <!-- ===== NEWSLETTER ===== -->
 <section class="cta-band">
   <div class="container">
-    <h2 class="section-title">Get Early Access to <span style="color:var(--color-accent)">New Drops</span></h2>
-    <p class="cta-band-sub">Join 50,000+ subscribers and be first to know about sales and new arrivals.</p>
+    <h2 class="section-title">Be First to Try <span style="color:var(--color-accent)">New Flavors</span></h2>
+    <p class="cta-band-sub">Join 50,000+ candy lovers. Get exclusive drops, discount codes, and TikTok sneak peeks.</p>
     <form class="newsletter-form" onsubmit="handleSubscribe(event)">
       <label for="email" class="visually-hidden">Email address</label>
       <input class="newsletter-input" type="email" id="email" placeholder="Your email address..." required>
@@ -606,8 +616,14 @@ button{font:inherit;cursor:pointer;border:none;background:none}
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="nav-logo">G<span class="logo-dot">BOX</span></div>
-        <p class="footer-brand-desc">Premium gear for people who move fast. As seen on TikTok.</p>
+        <div class="nav-logo" style="margin-bottom:4px">
+          <img src="assets/logo.svg" alt="G-Box logo" style="height:52px;width:52px;border-radius:50%;">
+          <div style="margin-left:10px;line-height:1.15">
+            <div style="font-size:1.05rem;font-weight:800;letter-spacing:-.03em;color:var(--color-text)">G-BOX</div>
+            <div style="font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--color-text-muted)">Freeze Dried Candy</div>
+          </div>
+        </div>
+        <p class="footer-brand-desc">Light, crunchy, and packed with flavor. Freeze-dried candy made in the USA and trending on TikTok.</p>
         <div class="footer-social">
           <a href="#" class="footer-social-link" aria-label="TikTok">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34l.04-8.86a8.34 8.34 0 0 0 4.87 1.56V4.55a4.85 4.85 0 0 1-1.14.14z"/></svg>
@@ -627,10 +643,10 @@ button{font:inherit;cursor:pointer;border:none;background:none}
       <div>
         <h3 class="footer-col-title">Shop</h3>
         <ul class="footer-links">
-          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">New Flavors</a></li>
           <li><a href="#">Best Sellers</a></li>
-          <li><a href="#">Sale</a></li>
-          <li><a href="#">Collections</a></li>
+          <li><a href="#">Sampler Boxes</a></li>
+          <li><a href="#">Bulk Orders</a></li>
         </ul>
       </div>
 
@@ -656,7 +672,7 @@ button{font:inherit;cursor:pointer;border:none;background:none}
     </div>
 
     <div class="footer-bottom">
-      <p class="footer-legal">&copy; 2026 GBOX. All rights reserved.</p>
+      <p class="footer-legal">&copy; 2026 G-Box Freeze Dried Candy. All rights reserved.</p>
       <div class="footer-payment-icons">
         <span class="payment-icon">VISA</span>
         <span class="payment-icon">MC</span>
