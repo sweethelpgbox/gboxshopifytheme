@@ -137,6 +137,31 @@ button{font:inherit;cursor:pointer;border:none;background:none}
 .feature-title{font-size:1rem;font-weight:700;color:var(--color-text)}
 .feature-desc{font-size:.875rem;color:var(--color-text-muted);line-height:1.5}
 
+/* Shop by Vibe strip */
+.vibe-section{padding:clamp(36px,5vw,60px) 0;background:var(--color-bg)}
+.vibe-section .section-header{margin-bottom:28px}
+.vibe-strip{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.vibe-strip::-webkit-scrollbar{display:none}
+.vibe-card{flex:0 0 auto;width:clamp(140px,18vw,190px);border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;position:relative;aspect-ratio:3/4;transition:transform .22s ease,box-shadow .22s ease;text-decoration:none;display:flex;flex-direction:column;justify-content:flex-end}
+.vibe-card:hover{transform:translateY(-6px) scale(1.03);box-shadow:0 20px 48px rgba(0,0,0,.18)}
+.vibe-card-bg{position:absolute;inset:0;z-index:0;transition:transform .4s ease}
+.vibe-card:hover .vibe-card-bg{transform:scale(1.08)}
+.vibe-card-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(0,0,0,.62) 0%,rgba(0,0,0,.08) 55%,transparent 100%)}
+.vibe-card-body{position:relative;z-index:2;padding:14px 14px 16px}
+.vibe-card-emoji{font-size:2.1rem;line-height:1;display:block;margin-bottom:6px;filter:drop-shadow(0 2px 6px rgba(0,0,0,.3))}
+.vibe-card-name{font-size:.95rem;font-weight:800;color:#fff;line-height:1.15;letter-spacing:-.02em}
+.vibe-card-sub{font-size:.72rem;color:rgba(255,255,255,.75);margin-top:3px;font-weight:500}
+/* Vibe gradients */
+.vibe-rainbow{background:linear-gradient(145deg,#ff6b6b 0%,#ffd93d 25%,#6bcb77 50%,#4d96ff 75%,#c77dff 100%)}
+.vibe-spicy{background:linear-gradient(145deg,#c1121f 0%,#e63946 40%,#ff6b35 80%,#ffd700 100%)}
+.vibe-creamy{background:linear-gradient(145deg,#e8d5b7 0%,#f5e6ce 35%,#ffe8d6 65%,#fff3e8 100%)}
+.vibe-cloud{background:linear-gradient(145deg,#a8d8ea 0%,#c8e6f5 35%,#e8f4fc 60%,#f8fbff 100%)}
+.vibe-citrus{background:linear-gradient(145deg,#f9c74f 0%,#f8961e 40%,#90be6d 75%,#43aa8b 100%)}
+.vibe-berry{background:linear-gradient(145deg,#7b2d8b 0%,#9b5de5 35%,#f15bb5 70%,#ff6b9d 100%)}
+/* Creamy and cloud text adjustments (light bg) */
+.vibe-creamy .vibe-card-overlay{background:linear-gradient(to top,rgba(80,50,20,.65) 0%,rgba(80,50,20,.05) 55%,transparent 100%)}
+.vibe-cloud .vibe-card-overlay{background:linear-gradient(to top,rgba(20,50,80,.55) 0%,rgba(20,50,80,.04) 55%,transparent 100%)}
+
 /* Category strip */
 .category-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
 .category-card{border-radius:var(--radius-lg);padding:28px 20px;text-align:center;cursor:pointer;transition:all var(--transition);border:1px solid var(--color-border);background:var(--color-surface);display:flex;flex-direction:column;align-items:center;gap:10px}
@@ -361,6 +386,83 @@ button{font:inherit;cursor:pointer;border:none;background:none}
     <span class="marquee-item">Free Shipping Over $40<span class="sep">✦</span>Made in the USA 🇺🇸<span class="sep">✦</span>Trending on TikTok 🍬<span class="sep">✦</span>New Flavors Weekly<span class="sep">✦</span>30-Day Satisfaction Guarantee<span class="sep">✦</span></span>
   </div>
 </div>
+
+<!-- ===== SHOP BY VIBE ===== -->
+<section class="vibe-section">
+  <div class="container">
+    <header class="section-header" style="margin-bottom:28px">
+      <div>
+        <span class="badge">🎨 Shop by Vibe</span>
+        <h2 class="section-title">Find Your <span>Flavor Mood</span></h2>
+        <p class="section-subtitle">Pick a vibe, crunch accordingly.</p>
+      </div>
+    </header>
+
+    <div class="vibe-strip" role="list">
+
+      <a href="/collections/freeze-dried-candy" class="vibe-card" role="listitem" aria-label="Rainbow Rush collection">
+        <div class="vibe-card-bg vibe-rainbow"></div>
+        <div class="vibe-card-overlay"></div>
+        <div class="vibe-card-body">
+          <span class="vibe-card-emoji">🌈</span>
+          <div class="vibe-card-name">Rainbow Rush</div>
+          <div class="vibe-card-sub">Frettles &amp; mixed flavors</div>
+        </div>
+      </a>
+
+      <a href="/collections/freeze-dried-candy?filter.p.tag=chamoy" class="vibe-card" role="listitem" aria-label="Spicy Red collection">
+        <div class="vibe-card-bg vibe-spicy"></div>
+        <div class="vibe-card-overlay"></div>
+        <div class="vibe-card-body">
+          <span class="vibe-card-emoji">🌶️</span>
+          <div class="vibe-card-name">Spicy Red</div>
+          <div class="vibe-card-sub">Chamoy &amp; Tajin Frettles</div>
+        </div>
+      </a>
+
+      <a href="/collections/ice-cream" class="vibe-card" role="listitem" aria-label="Creamy Dream collection">
+        <div class="vibe-card-bg vibe-creamy"></div>
+        <div class="vibe-card-overlay"></div>
+        <div class="vibe-card-body">
+          <span class="vibe-card-emoji">🍦</span>
+          <div class="vibe-card-name">Creamy Dream</div>
+          <div class="vibe-card-sub">Astronaut ice cream bites</div>
+        </div>
+      </a>
+
+      <a href="/collections/taffy" class="vibe-card" role="listitem" aria-label="Cloud Soft collection">
+        <div class="vibe-card-bg vibe-cloud"></div>
+        <div class="vibe-card-overlay"></div>
+        <div class="vibe-card-body">
+          <span class="vibe-card-emoji">☁️</span>
+          <div class="vibe-card-name">Cloud Soft</div>
+          <div class="vibe-card-sub">Taffy puffs &amp; marshmallows</div>
+        </div>
+      </a>
+
+      <a href="/collections/freeze-dried-candy?filter.p.tag=citrus" class="vibe-card" role="listitem" aria-label="Citrus Burst collection">
+        <div class="vibe-card-bg vibe-citrus"></div>
+        <div class="vibe-card-overlay"></div>
+        <div class="vibe-card-body">
+          <span class="vibe-card-emoji">🍋</span>
+          <div class="vibe-card-name">Citrus Burst</div>
+          <div class="vibe-card-sub">Lemon, peach &amp; pineapple</div>
+        </div>
+      </a>
+
+      <a href="/collections/freeze-dried-candy?filter.p.tag=berry" class="vibe-card" role="listitem" aria-label="Wild Berry collection">
+        <div class="vibe-card-bg vibe-berry"></div>
+        <div class="vibe-card-overlay"></div>
+        <div class="vibe-card-body">
+          <span class="vibe-card-emoji">🍇</span>
+          <div class="vibe-card-name">Wild Berry</div>
+          <div class="vibe-card-sub">Berry &amp; tropical Frettles</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
 
 <!-- ===== FEATURED COLLECTION ===== -->
 <section class="section" style="background:var(--color-bg)">
