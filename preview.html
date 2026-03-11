@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GBOX — Light Theme Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===================================================
+   GBOX THEME — Light Edition  (standalone preview)
+   =================================================== */
+:root {
+  --color-bg:         #f7f5f2;
+  --color-bg-alt:     #ffffff;
+  --color-bg-muted:   #efefed;
+  --color-surface:    #ffffff;
+  --color-border:     #e2ddd8;
+  --color-text:       #1a1714;
+  --color-text-muted: #6b6560;
+  --color-text-light: #9e9890;
+  --color-accent:     #ff2d55;
+  --color-accent-2:   #00c2cb;
+  --color-accent-dark:#d91e45;
+  --color-card-shadow:rgba(0,0,0,0.07);
+  --font-sans:'Inter',-apple-system,sans-serif;
+  --radius-sm:6px; --radius-md:12px; --radius-lg:20px; --radius-full:9999px;
+  --transition:.2s ease;
+  --max-w:1280px;
+  --gutter:clamp(16px,4vw,48px);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-sans);background:var(--color-bg);color:var(--color-text);line-height:1.6;-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font:inherit;cursor:pointer;border:none;background:none}
+.container{max-width:var(--max-w);margin-inline:auto;padding-inline:var(--gutter)}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.section-title{font-size:clamp(1.5rem,3vw,2.25rem);font-weight:700;letter-spacing:-.03em;color:var(--color-text)}
+.section-title span{color:var(--color-accent)}
+.badge{display:inline-flex;align-items:center;gap:6px;background:var(--color-accent);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:var(--radius-full);margin-bottom:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:var(--radius-full);font-size:.9rem;font-weight:600;transition:all var(--transition);cursor:pointer;white-space:nowrap}
+.btn-primary{background:var(--color-accent);color:#fff;box-shadow:0 4px 16px rgba(255,45,85,.3)}
+.btn-primary:hover{background:var(--color-accent-dark);transform:translateY(-1px);box-shadow:0 6px 20px rgba(255,45,85,.4)}
+.btn-secondary{background:var(--color-bg-muted);color:var(--color-text);border:1px solid var(--color-border)}
+.btn-secondary:hover{background:var(--color-border)}
+.btn-outline{background:transparent;color:var(--color-accent);border:2px solid var(--color-accent)}
+.btn-outline:hover{background:var(--color-accent);color:#fff}
+
+/* Announcement bar */
+.announcement-bar{background:linear-gradient(90deg,var(--color-accent),var(--color-accent-2));color:#fff;text-align:center;padding:9px var(--gutter);font-size:.82rem;font-weight:500;letter-spacing:.02em}
+.announcement-bar a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(247,245,242,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--color-border)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:24px}
+.nav-logo{font-size:1.35rem;font-weight:800;letter-spacing:-.04em;color:var(--color-text);flex-shrink:0}
+.nav-logo .logo-dot{color:var(--color-accent)}
+.nav-links{display:flex;align-items:center;gap:4px;flex:1;justify-content:center}
+.nav-links a{padding:6px 14px;border-radius:var(--radius-full);font-size:.9rem;font-weight:500;color:var(--color-text-muted);transition:all var(--transition)}
+.nav-links a:hover,.nav-links a.active{background:var(--color-bg-muted);color:var(--color-text)}
+.nav-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.nav-icon-btn{width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;border-radius:var(--radius-full);color:var(--color-text-muted);transition:all var(--transition);position:relative}
+.nav-icon-btn:hover{background:var(--color-bg-muted);color:var(--color-text)}
+.cart-count{position:absolute;top:4px;right:4px;width:16px;height:16px;background:var(--color-accent);color:#fff;font-size:.65rem;font-weight:700;border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center}
+
+/* Hero */
+.hero{padding:clamp(48px,8vw,96px) 0;overflow:hidden}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px);align-items:center}
+.hero-content{max-width:560px}
+.hero-eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.hero-eyebrow::before{content:'';display:block;width:24px;height:2px;background:var(--color-accent);border-radius:2px}
+.hero-heading{font-size:clamp(2.4rem,5vw,4rem);font-weight:800;letter-spacing:-.04em;line-height:1.1;margin-bottom:20px}
+.hero-heading .highlight{color:var(--color-accent)}
+.hero-body{font-size:1.1rem;color:var(--color-text-muted);margin-bottom:32px;max-width:440px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:48px}
+.hero-stats{display:flex;gap:32px}
+.hero-stat-value{font-size:1.5rem;font-weight:800;letter-spacing:-.03em;color:var(--color-text)}
+.hero-stat-label{font-size:.8rem;color:var(--color-text-muted)}
+.hero-media{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hero-media-card{border-radius:var(--radius-lg);overflow:hidden;background:var(--color-bg-muted);aspect-ratio:3/4;box-shadow:0 8px 32px var(--color-card-shadow);display:flex;align-items:center;justify-content:center}
+.hero-media-card:first-child{margin-top:32px}
+.hero-media-card.bg1{background:linear-gradient(145deg,#fce4ec,#f8bbd0)}
+.hero-media-card.bg2{background:linear-gradient(145deg,#e0f7fa,#b2ebf2)}
+.hero-media-card svg{width:64px;height:64px;opacity:.3;color:var(--color-text)}
+.media-label{font-size:.8rem;font-weight:600;color:var(--color-text-muted);margin-top:8px;text-align:center}
+
+/* Marquee */
+.marquee-section{background:var(--color-text);color:#fff;padding:16px 0;overflow:hidden}
+.marquee-track{display:flex;gap:0;animation:marquee 24s linear infinite;width:max-content}
+.marquee-item{display:flex;align-items:center;gap:16px;padding-inline:32px;font-size:.85rem;font-weight:600;letter-spacing:.03em;white-space:nowrap}
+.marquee-item .sep{color:var(--color-accent);font-size:1.2em}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* Section */
+.section{padding:clamp(48px,7vw,96px) 0}
+.section-header{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+.section-subtitle{font-size:1rem;color:var(--color-text-muted);max-width:480px;margin-top:8px}
+
+/* Product grid */
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.product-card{background:var(--color-surface);border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--color-border);transition:all var(--transition);position:relative}
+.product-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px var(--color-card-shadow);border-color:transparent}
+.product-card-media{aspect-ratio:1;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
+.product-card-media.p1{background:linear-gradient(135deg,#fff3e0,#ffe0b2)}
+.product-card-media.p2{background:linear-gradient(135deg,#f3e5f5,#e1bee7)}
+.product-card-media.p3{background:linear-gradient(135deg,#e8f5e9,#c8e6c9)}
+.product-card-media.p4{background:linear-gradient(135deg,#e3f2fd,#bbdefb)}
+.product-card-media svg{width:72px;height:72px;opacity:.2;color:var(--color-text)}
+.product-card-badge{position:absolute;top:12px;left:12px;background:var(--color-accent);color:#fff;font-size:.7rem;font-weight:700;padding:3px 8px;border-radius:var(--radius-full);text-transform:uppercase;letter-spacing:.06em}
+.product-card-body{padding:16px}
+.product-card-vendor{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--color-text-light);margin-bottom:4px}
+.product-card-title{font-size:.95rem;font-weight:600;color:var(--color-text);margin-bottom:8px;line-height:1.3}
+.product-card-price{display:flex;align-items:center;gap:8px}
+.price-current{font-size:1rem;font-weight:700;color:var(--color-text)}
+.price-compare{font-size:.85rem;color:var(--color-text-light);text-decoration:line-through}
+.price-save{font-size:.75rem;font-weight:600;color:var(--color-accent)}
+
+/* Features */
+.features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.feature-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:28px 24px;display:flex;flex-direction:column;gap:12px;transition:all var(--transition)}
+.feature-card:hover{border-color:var(--color-accent);box-shadow:0 8px 24px var(--color-card-shadow)}
+.feature-icon{width:48px;height:48px;background:rgba(255,45,85,.08);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--color-accent)}
+.feature-title{font-size:1rem;font-weight:700;color:var(--color-text)}
+.feature-desc{font-size:.875rem;color:var(--color-text-muted);line-height:1.5}
+
+/* TikTok section */
+.tiktok-section{background:var(--color-bg-alt);padding:clamp(48px,7vw,96px) 0;border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border)}
+.tiktok-header{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+.tiktok-logo-badge{display:inline-flex;align-items:center;gap:8px;margin-bottom:12px}
+.tiktok-logo-badge span{font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--color-text-muted)}
+.tiktok-follow-btn{display:inline-flex;align-items:center;gap:8px;background:var(--color-text);color:#fff;padding:10px 20px;border-radius:var(--radius-full);font-size:.85rem;font-weight:600;transition:all var(--transition)}
+.tiktok-follow-btn:hover{opacity:.85;transform:translateY(-1px)}
+.tiktok-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.tiktok-card{border-radius:var(--radius-lg);overflow:hidden;position:relative;aspect-ratio:9/16;cursor:pointer;box-shadow:0 4px 16px var(--color-card-shadow);transition:all var(--transition)}
+.tiktok-card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 20px 48px rgba(0,0,0,.15)}
+.tiktok-card-inner{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:16px}
+.tiktok-card-inner span{font-size:.72rem;color:var(--color-text-muted);text-align:center;font-weight:500}
+.tc1{background:linear-gradient(160deg,#fce4ec 0%,#f8bbd0 100%)}
+.tc2{background:linear-gradient(160deg,#e0f7fa 0%,#b2ebf2 100%)}
+.tc3{background:linear-gradient(160deg,#f3e5f5 0%,#e1bee7 100%)}
+.tc4{background:linear-gradient(160deg,#fff8e1 0%,#ffe082 100%)}
+.tc5{background:linear-gradient(160deg,#e8f5e9 0%,#a5d6a7 100%)}
+.tc6{background:linear-gradient(160deg,#fce4ec 0%,#ef9a9a 100%)}
+.tiktok-play-btn{width:48px;height:48px;background:rgba(255,255,255,.9);border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;transition:all var(--transition);box-shadow:0 4px 16px rgba(0,0,0,.12)}
+.tiktok-card:hover .tiktok-play-btn{background:var(--color-accent);box-shadow:0 8px 24px rgba(255,45,85,.4)}
+.tiktok-card:hover .tiktok-play-btn svg{color:#fff}
+.tiktok-play-btn svg{width:18px;height:18px;color:var(--color-accent);margin-left:3px}
+.tiktok-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.1) 40%,transparent 60%);opacity:0;transition:opacity var(--transition);display:flex;flex-direction:column;justify-content:flex-end;padding:14px}
+.tiktok-card:hover .tiktok-card-overlay{opacity:1}
+.tiktok-card-meta{color:#fff}
+.tiktok-card-caption{font-size:.75rem;font-weight:500;line-height:1.4;margin-bottom:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tiktok-card-stats{display:flex;align-items:center;gap:10px;font-size:.7rem;font-weight:600;opacity:.9}
+.tiktok-card-stat{display:flex;align-items:center;gap:3px}
+.tiktok-cta-row{text-align:center;margin-top:36px}
+
+/* Newsletter band */
+.cta-band{background:linear-gradient(135deg,var(--color-text) 0%,#2d2520 100%);color:#fff;padding:clamp(40px,6vw,80px) 0;text-align:center}
+.cta-band .section-title{color:#fff;margin-bottom:12px}
+.cta-band-sub{color:rgba(255,255,255,.65);margin-bottom:32px;font-size:1.05rem}
+.newsletter-form{display:flex;gap:8px;max-width:480px;margin-inline:auto}
+.newsletter-input{flex:1;padding:12px 20px;border-radius:var(--radius-full);border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.12);color:#fff;font-size:.9rem;outline:none;transition:all var(--transition);font-family:inherit}
+.newsletter-input::placeholder{color:rgba(255,255,255,.45)}
+.newsletter-input:focus{border-color:var(--color-accent);background:rgba(255,255,255,.18)}
+
+/* Footer */
+.site-footer{background:var(--color-surface);border-top:1px solid var(--color-border);padding-top:clamp(40px,6vw,72px)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:clamp(24px,4vw,56px);margin-bottom:48px}
+.footer-brand-desc{font-size:.9rem;color:var(--color-text-muted);margin:12px 0 20px;max-width:280px;line-height:1.7}
+.footer-social{display:flex;gap:8px}
+.footer-social-link{width:38px;height:38px;border-radius:var(--radius-full);background:var(--color-bg-muted);border:1px solid var(--color-border);display:flex;align-items:center;justify-content:center;color:var(--color-text-muted);transition:all var(--transition)}
+.footer-social-link:hover{background:var(--color-accent);color:#fff;border-color:var(--color-accent)}
+.footer-col-title{font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--color-text);margin-bottom:16px}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:.9rem;color:var(--color-text-muted);transition:color var(--transition)}
+.footer-links a:hover{color:var(--color-accent)}
+.footer-bottom{border-top:1px solid var(--color-border);padding:20px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-legal{font-size:.82rem;color:var(--color-text-light)}
+.footer-payment-icons{display:flex;gap:8px;align-items:center}
+.payment-icon{height:24px;padding:2px 6px;background:var(--color-bg-muted);border:1px solid var(--color-border);border-radius:4px;font-size:.7rem;font-weight:700;color:var(--color-text-muted);display:flex;align-items:center}
+
+@media(max-width:1024px){
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .features-grid{grid-template-columns:repeat(2,1fr)}
+  .tiktok-grid{grid-template-columns:repeat(3,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-media{display:none}
+  .nav-links{display:none}
+  .tiktok-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .newsletter-form{flex-direction:column}
+}
+@media(max-width:480px){
+  .product-grid{grid-template-columns:1fr}
+  .features-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== ANNOUNCEMENT BAR ===== -->
+<div class="announcement-bar">
+  Free shipping on orders over $75 &nbsp;·&nbsp; <a href="#">Shop now →</a>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">G<span class="logo-dot">BOX</span></a>
+
+    <nav class="nav-links">
+      <a href="#" class="active">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Collections</a>
+      <a href="#">TikTok</a>
+      <a href="#">About</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="#" class="nav-icon-btn" aria-label="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </a>
+      <a href="#" class="nav-icon-btn" aria-label="Account">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      </a>
+      <a href="#" class="nav-icon-btn" aria-label="Cart">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><line x1="3" x2="21" y1="6" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count">3</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-eyebrow">New Collection</p>
+        <h1 class="hero-heading">Gear Up for <span class="highlight">Epic</span> Adventures</h1>
+        <p class="hero-body">Discover our latest collection of premium gear built for performance and style. As seen all over TikTok.</p>
+        <div class="hero-cta">
+          <a href="#" class="btn btn-primary">
+            Shop Now
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="#tiktok" class="btn btn-secondary">See TikTok Videos</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-value">50K+</div>
+            <div class="hero-stat-label">Happy customers</div>
+          </div>
+          <div>
+            <div class="hero-stat-value">4.9★</div>
+            <div class="hero-stat-label">Average rating</div>
+          </div>
+          <div>
+            <div class="hero-stat-value">1M+</div>
+            <div class="hero-stat-label">TikTok views</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-media-card bg1">
+          <div style="text-align:center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity:.25;color:#1a1714"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="m8.5 8.5 7 7M15.5 8.5l-7 7"/></svg>
+            <div class="media-label">Product photo</div>
+          </div>
+        </div>
+        <div class="hero-media-card bg2">
+          <div style="text-align:center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity:.25;color:#1a1714"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="m8.5 8.5 7 7M15.5 8.5l-7 7"/></svg>
+            <div class="media-label">Product photo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MARQUEE ===== -->
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track" id="marquee">
+    <span class="marquee-item">Free Shipping Over $75<span class="sep">✦</span>Easy 30-Day Returns<span class="sep">✦</span>Trending on TikTok<span class="sep">✦</span>New Drops Weekly<span class="sep">✦</span></span>
+    <span class="marquee-item">Free Shipping Over $75<span class="sep">✦</span>Easy 30-Day Returns<span class="sep">✦</span>Trending on TikTok<span class="sep">✦</span>New Drops Weekly<span class="sep">✦</span></span>
+    <span class="marquee-item">Free Shipping Over $75<span class="sep">✦</span>Easy 30-Day Returns<span class="sep">✦</span>Trending on TikTok<span class="sep">✦</span>New Drops Weekly<span class="sep">✦</span></span>
+    <span class="marquee-item">Free Shipping Over $75<span class="sep">✦</span>Easy 30-Day Returns<span class="sep">✦</span>Trending on TikTok<span class="sep">✦</span>New Drops Weekly<span class="sep">✦</span></span>
+  </div>
+</div>
+
+<!-- ===== FEATURED COLLECTION ===== -->
+<section class="section" style="background:var(--color-bg)">
+  <div class="container">
+    <header class="section-header">
+      <div>
+        <span class="badge">🔥 Trending</span>
+        <h2 class="section-title">Shop the <span>Drop</span></h2>
+        <p class="section-subtitle">As seen on TikTok — grab yours before it sells out.</p>
+      </div>
+      <a href="#" class="btn btn-outline">View all products</a>
+    </header>
+
+    <div class="product-grid">
+      <article class="product-card">
+        <div class="product-card-media p1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.18"><rect x="3" y="3" width="18" height="18" rx="3"/></svg>
+          <span class="product-card-badge">-25%</span>
+        </div>
+        <div class="product-card-body">
+          <p class="product-card-vendor">GBOX</p>
+          <h3 class="product-card-title">Pro Adventure Pack</h3>
+          <div class="product-card-price">
+            <span class="price-current">$74.99</span>
+            <span class="price-compare">$99.99</span>
+            <span class="price-save">Save 25%</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-card-media p2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.18"><rect x="3" y="3" width="18" height="18" rx="3"/></svg>
+          <span class="product-card-badge" style="background:var(--color-accent-2)">New</span>
+        </div>
+        <div class="product-card-body">
+          <p class="product-card-vendor">GBOX</p>
+          <h3 class="product-card-title">Urban Explorer Tee</h3>
+          <div class="product-card-price">
+            <span class="price-current">$38.00</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-card-media p3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.18"><rect x="3" y="3" width="18" height="18" rx="3"/></svg>
+        </div>
+        <div class="product-card-body">
+          <p class="product-card-vendor">GBOX</p>
+          <h3 class="product-card-title">Trail Blazer Shorts</h3>
+          <div class="product-card-price">
+            <span class="price-current">$52.00</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-card-media p4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="opacity:.18"><rect x="3" y="3" width="18" height="18" rx="3"/></svg>
+          <span class="product-card-badge">-15%</span>
+        </div>
+        <div class="product-card-body">
+          <p class="product-card-vendor">GBOX</p>
+          <h3 class="product-card-title">Summit Cap</h3>
+          <div class="product-card-price">
+            <span class="price-current">$25.49</span>
+            <span class="price-compare">$29.99</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES / USP ===== -->
+<section class="section" style="background:var(--color-bg);padding-top:0">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <div class="feature-title">Free Shipping</div>
+        <div class="feature-desc">Free standard shipping on orders over $75. Express available at checkout.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v6h6"/><path d="M3 8a9 9 0 1 0 2.25-5.5L3 8"/></svg>
+        </div>
+        <div class="feature-title">Easy Returns</div>
+        <div class="feature-desc">Not happy? Return any item within 30 days, hassle-free.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="feature-title">Secure Payments</div>
+        <div class="feature-desc">Your payment info is always protected with 256-bit SSL encryption.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="feature-title">Quality Guaranteed</div>
+        <div class="feature-desc">Every product is curated and tested by our team before it hits the shelves.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TIKTOK VIDEOS ===== -->
+<section class="tiktok-section" id="tiktok">
+  <div class="container">
+    <header class="tiktok-header">
+      <div>
+        <div class="tiktok-logo-badge">
+          <!-- TikTok icon: dual-colour layers -->
+          <svg viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.5 2h-4.1v19.7a4.6 4.6 0 0 1-4.6 4.5 4.6 4.6 0 0 1-4.6-4.5 4.6 4.6 0 0 1 4.6-4.5c.45 0 .88.07 1.3.18V13.2a8.8 8.8 0 0 0-1.3-.1 8.7 8.7 0 0 0-8.7 8.6 8.7 8.7 0 0 0 8.7 8.7 8.7 8.7 0 0 0 8.7-8.7V12.3a12.4 12.4 0 0 0 7.3 2.3v-4.1a8.3 8.3 0 0 1-7.3-8.5z" fill="#00c2cb" transform="translate(-1,-1)"/>
+            <path d="M20.5 2h-4.1v19.7a4.6 4.6 0 0 1-4.6 4.5 4.6 4.6 0 0 1-4.6-4.5 4.6 4.6 0 0 1 4.6-4.5c.45 0 .88.07 1.3.18V13.2a8.8 8.8 0 0 0-1.3-.1 8.7 8.7 0 0 0-8.7 8.6 8.7 8.7 0 0 0 8.7 8.7 8.7 8.7 0 0 0 8.7-8.7V12.3a12.4 12.4 0 0 0 7.3 2.3v-4.1a8.3 8.3 0 0 1-7.3-8.5z" fill="#ff2d55" transform="translate(1,1)"/>
+            <path d="M20.5 2h-4.1v19.7a4.6 4.6 0 0 1-4.6 4.5 4.6 4.6 0 0 1-4.6-4.5 4.6 4.6 0 0 1 4.6-4.5c.45 0 .88.07 1.3.18V13.2a8.8 8.8 0 0 0-1.3-.1 8.7 8.7 0 0 0-8.7 8.6 8.7 8.7 0 0 0 8.7 8.7 8.7 8.7 0 0 0 8.7-8.7V12.3a12.4 12.4 0 0 0 7.3 2.3v-4.1a8.3 8.3 0 0 1-7.3-8.5z" fill="#1a1714"/>
+          </svg>
+          <span>As seen on TikTok</span>
+        </div>
+        <h2 class="section-title">Watch Us on <span>TikTok</span></h2>
+        <p class="section-subtitle">Real customers, real reviews — follow along for exclusive drops and behind-the-scenes content.</p>
+      </div>
+      <a href="#" class="tiktok-follow-btn">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34l.04-8.86a8.34 8.34 0 0 0 4.87 1.56V4.55a4.85 4.85 0 0 1-1.14.14z"/></svg>
+        @yourbrand
+      </a>
+    </header>
+
+    <div class="tiktok-grid">
+
+      <div class="tiktok-card tc1">
+        <div class="tiktok-card-inner">
+          <div class="tiktok-play-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <span>#gbox #fyp</span>
+        </div>
+        <div class="tiktok-card-overlay">
+          <div class="tiktok-card-meta">
+            <p class="tiktok-card-caption">Check out our latest drop! 🔥 #gbox #fyp</p>
+            <div class="tiktok-card-stats">
+              <span class="tiktok-card-stat">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                12.4K
+              </span>
+              <span class="tiktok-card-stat">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                248K
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tiktok-card tc2">
+        <div class="tiktok-card-inner">
+          <div class="tiktok-play-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <span>#shipping #smallbiz</span>
+        </div>
+        <div class="tiktok-card-overlay">
+          <div class="tiktok-card-meta">
+            <p class="tiktok-card-caption">Behind the scenes at our warehouse 📦 #shipping #smallbusiness</p>
+            <div class="tiktok-card-stats">
+              <span class="tiktok-card-stat">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                8.1K
+              </span>
+              <span class="tiktok-card-stat">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                195K
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tiktok-card tc3">
+        <div class="tiktok-card-inner">
+          <div class="tiktok-play-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <span>#unboxing #haul</span>
+        </div>
+        <div class="tiktok-card-overlay">
+          <div class="tiktok-card-meta">
+            <p class="tiktok-card-caption">Customer unboxing reaction 😍 #unboxing #haul</p>
+            <div class="tiktok-card-stats">
+              <span class="tiktok-card-stat">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                21.2K
+              </span>
+              <span class="tiktok-card-stat">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                512K
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tiktok-card tc4">
+        <div class="tiktok-card-inner">
+          <div class="tiktok-play-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <span>#collab #limited</span>
+        </div>
+        <div class="tiktok-card-overlay">
+          <div class="tiktok-card-meta">
+            <p class="tiktok-card-caption">Limited edition collab dropping Friday 👀 #collab #limitededition</p>
+            <div class="tiktok-card-stats">
+              <span class="tiktok-card-stat">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                16.7K
+              </span>
+              <span class="tiktok-card-stat">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                380K
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tiktok-card tc5">
+        <div class="tiktok-card-inner">
+          <div class="tiktok-play-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <span>#style #ootd</span>
+        </div>
+        <div class="tiktok-card-overlay">
+          <div class="tiktok-card-meta">
+            <p class="tiktok-card-caption">How to style your new gear 🎒 #style #ootd</p>
+            <div class="tiktok-card-stats">
+              <span class="tiktok-card-stat">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                9.8K
+              </span>
+              <span class="tiktok-card-stat">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                221K
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tiktok-card tc6">
+        <div class="tiktok-card-inner">
+          <div class="tiktok-play-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <span>#sale #deals ⚡</span>
+        </div>
+        <div class="tiktok-card-overlay">
+          <div class="tiktok-card-meta">
+            <p class="tiktok-card-caption">Flash sale starts NOW — link in bio! ⚡ #sale #deals</p>
+            <div class="tiktok-card-stats">
+              <span class="tiktok-card-stat">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                31.5K
+              </span>
+              <span class="tiktok-card-stat">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                720K
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.tiktok-grid -->
+
+    <div class="tiktok-cta-row">
+      <a href="#" class="btn btn-outline">
+        See more on TikTok
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="cta-band">
+  <div class="container">
+    <h2 class="section-title">Get Early Access to <span style="color:var(--color-accent)">New Drops</span></h2>
+    <p class="cta-band-sub">Join 50,000+ subscribers and be first to know about sales and new arrivals.</p>
+    <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+      <label for="email" class="visually-hidden">Email address</label>
+      <input class="newsletter-input" type="email" id="email" placeholder="Your email address..." required>
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="nav-logo">G<span class="logo-dot">BOX</span></div>
+        <p class="footer-brand-desc">Premium gear for people who move fast. As seen on TikTok.</p>
+        <div class="footer-social">
+          <a href="#" class="footer-social-link" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34l.04-8.86a8.34 8.34 0 0 0 4.87 1.56V4.55a4.85 4.85 0 0 1-1.14.14z"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="X / Twitter">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#fff"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer-col-title">Shop</h3>
+        <ul class="footer-links">
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Best Sellers</a></li>
+          <li><a href="#">Sale</a></li>
+          <li><a href="#">Collections</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-col-title">Company</h3>
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Sustainability</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-col-title">Support</h3>
+        <ul class="footer-links">
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-legal">&copy; 2026 GBOX. All rights reserved.</p>
+      <div class="footer-payment-icons">
+        <span class="payment-icon">VISA</span>
+        <span class="payment-icon">MC</span>
+        <span class="payment-icon">AMEX</span>
+        <span class="payment-icon">PayPal</span>
+        <span class="payment-icon">Shop Pay</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Marquee duplicate
+const t = document.getElementById('marquee');
+if (t) t.innerHTML += t.innerHTML;
+
+// Newsletter
+function handleSubscribe(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button');
+  btn.textContent = 'Subscribed! ✓';
+  btn.disabled = true;
+  e.target.querySelector('input').value = '';
+}
+
+// Sticky header shadow
+const hdr = document.querySelector('.site-header');
+window.addEventListener('scroll', () => {
+  hdr.style.boxShadow = window.scrollY > 8 ? '0 2px 20px rgba(0,0,0,.08)' : '';
+}, { passive: true });
+</script>
+</body>
+</html>
