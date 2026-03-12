@@ -5,7 +5,7 @@
         <h1 class="page-title">{{ page.title }}</h1>
       </header>
     {%- endif -%}
-    <div class="page-content rte">
+    <div class="page-content rte page-content--{{ section.settings.content_width }}">
       {{ page.content }}
     </div>
   </div>

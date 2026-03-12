@@ -1,6 +1,7 @@
 {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
 {%- assign products_per_page = section.settings.products_per_page | default: 12 -%}
 
+{%- paginate collection.products by products_per_page -%}
 <section class="section main-collection" id="main-collection-{{ section.id }}">
   <div class="container">
 
@@ -53,8 +54,8 @@
 
     <!-- Product grid -->
     <div class="product-grid">
-      {%- if collection.products.size > 0 -%}
-        {%- for product in collection.products limit: products_per_page -%}
+      {%- if collection.products_count > 0 -%}
+        {%- for product in collection.products -%}
           {%- assign has_compare = product.compare_at_price > product.price -%}
           {%- if has_compare -%}
             {%- assign savings = product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price -%}
@@ -123,6 +124,7 @@
 
   </div>
 </section>
+{%- endpaginate -%}
 
 {% schema %}
 {

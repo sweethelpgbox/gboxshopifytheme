@@ -29,10 +29,6 @@
             <time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">
               {{ article.published_at | date: '%B %d, %Y' }}
             </time>
-            {%- if article.read_time -%}
-              <span class="article-meta-sep">·</span>
-              <span>{{ article.read_time }} min read</span>
-            {%- endif -%}
           </div>
         </header>
 

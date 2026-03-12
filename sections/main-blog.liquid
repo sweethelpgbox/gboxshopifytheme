@@ -1,3 +1,4 @@
+{%- paginate blog.articles by section.settings.articles_per_page -%}
 <section class="section main-blog" id="main-blog-{{ section.id }}">
   <div class="container">
 
@@ -21,7 +22,7 @@
     {%- endif -%}
 
     <div class="blog-grid">
-      {%- for article in blog.articles limit: section.settings.articles_per_page -%}
+      {%- for article in blog.articles -%}
         <article class="article-card">
           {%- if article.image -%}
             <a href="{{ article.url }}" class="article-card-media">
@@ -76,6 +77,7 @@
 
   </div>
 </section>
+{%- endpaginate -%}
 
 {% schema %}
 {
