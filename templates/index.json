@@ -1,15 +1,25 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "hero": {
+    "hero_LGrfeT": {
       "type": "hero",
+      "name": "Hero",
       "settings": {
         "eyebrow": "New Collection",
-        "heading": "Gear Up for Epic Adventures",
-        "subheading": "Discover our latest collection of premium freeze dried candy built for performance and style.",
+        "heading": "<p>Gear Up for <em>Epic</em> Adventures</p>",
+        "subheading": "Discover our latest collection of premium gear built for performance and style.",
         "cta_primary_label": "Shop Now",
-        "cta_primary_url": "/collections/all",
+        "cta_primary_url": "",
         "cta_secondary_label": "See TikTok Videos",
-        "cta_secondary_url": "/collections/all",
+        "cta_secondary_url": "",
         "show_stats": true,
         "stat_1_value": "50K+",
         "stat_1_label": "Happy customers",
@@ -19,30 +29,21 @@
         "stat_3_label": "TikTok views"
       }
     },
-    "marquee": {
+    "marquee_ticker_dgfHR8": {
       "type": "marquee-ticker",
+      "name": "Marquee Ticker",
       "settings": {
         "text_1": "Free Shipping Over $75",
         "text_2": "Easy 30-Day Returns",
         "text_3": "Trending on TikTok",
         "text_4": "New Drops Weekly",
-        "speed": 25
+        "speed": 60
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "badge": "Trending",
-        "heading": "Shop the Drop",
-        "subheading": "As seen on TikTok — grab yours before it sells out.",
-        "products_to_show": 4,
-        "view_all_label": "View all products"
-      }
-    },
-    "features_usp": {
+    "features_usp_hUABYW": {
       "type": "features-usp",
       "blocks": {
-        "feature_1": {
+        "feature_zxKggD": {
           "type": "feature",
           "settings": {
             "icon": "truck",
@@ -50,7 +51,7 @@
             "description": "Free standard shipping on orders over $75. Express available at checkout."
           }
         },
-        "feature_2": {
+        "feature_3kCrG8": {
           "type": "feature",
           "settings": {
             "icon": "return",
@@ -58,7 +59,7 @@
             "description": "Not happy? Return any item within 30 days, hassle-free."
           }
         },
-        "feature_3": {
+        "feature_JA4jUL": {
           "type": "feature",
           "settings": {
             "icon": "shield",
@@ -66,7 +67,7 @@
             "description": "Your payment info is always protected with 256-bit SSL encryption."
           }
         },
-        "feature_4": {
+        "feature_FbWe7g": {
           "type": "feature",
           "settings": {
             "icon": "star",
@@ -75,85 +76,19 @@
           }
         }
       },
-      "block_order": ["feature_1", "feature_2", "feature_3", "feature_4"],
+      "block_order": [
+        "feature_zxKggD",
+        "feature_3kCrG8",
+        "feature_JA4jUL",
+        "feature_FbWe7g"
+      ],
+      "name": "Features / USP",
       "settings": {}
-    },
-    "tiktok_videos": {
-      "type": "tiktok-videos",
-      "blocks": {
-        "video_1": {
-          "type": "video",
-          "settings": {
-            "caption": "Check out our latest drop! #gbox #fyp",
-            "likes": "12.4K",
-            "views": "248K"
-          }
-        },
-        "video_2": {
-          "type": "video",
-          "settings": {
-            "caption": "Behind the scenes at our warehouse #shipping #smallbusiness",
-            "likes": "8.1K",
-            "views": "195K"
-          }
-        },
-        "video_3": {
-          "type": "video",
-          "settings": {
-            "caption": "Customer unboxing reaction #unboxing #haul",
-            "likes": "21.2K",
-            "views": "512K"
-          }
-        },
-        "video_4": {
-          "type": "video",
-          "settings": {
-            "caption": "Limited edition collab dropping Friday #collab #limitededition",
-            "likes": "16.7K",
-            "views": "380K"
-          }
-        },
-        "video_5": {
-          "type": "video",
-          "settings": {
-            "caption": "How to style your new gear #style #ootd",
-            "likes": "9.8K",
-            "views": "221K"
-          }
-        },
-        "video_6": {
-          "type": "video",
-          "settings": {
-            "caption": "Flash sale starts NOW — link in bio! #sale #deals",
-            "likes": "31.5K",
-            "views": "720K"
-          }
-        }
-      },
-      "block_order": ["video_1", "video_2", "video_3", "video_4", "video_5", "video_6"],
-      "settings": {
-        "heading": "Watch Us on TikTok",
-        "subheading": "Real customers, real reviews — follow along for exclusive drops and behind-the-scenes content.",
-        "tiktok_handle": "gboxfreezedry",
-        "cta_label": "See more on TikTok"
-      }
-    },
-    "newsletter": {
-      "type": "newsletter",
-      "settings": {
-        "heading": "Get Early Access to New Drops",
-        "subheading": "Join 50,000+ subscribers and be first to know about sales and new arrivals.",
-        "placeholder": "Your email address...",
-        "button_label": "Subscribe"
-      }
     }
   },
   "order": [
-    "hero",
-    "marquee",
-    "featured_collection",
-    "features_usp",
-    "tiktok_videos",
-    "newsletter"
+    "hero_LGrfeT",
+    "marquee_ticker_dgfHR8",
+    "features_usp_hUABYW"
   ]
 }
