@@ -8,46 +8,7 @@
         "show_sort": true,
         "products_per_page": 12
       }
-    },
-    "features-usp": {
-      "type": "features-usp",
-      "blocks": {
-        "feature-1": {
-          "type": "feature",
-          "settings": {
-            "icon": "truck",
-            "title": "Free Shipping",
-            "description": "Free standard shipping on orders over $75."
-          }
-        },
-        "feature-2": {
-          "type": "feature",
-          "settings": {
-            "icon": "return",
-            "title": "Easy Returns",
-            "description": "Return any item within 30 days, hassle-free."
-          }
-        },
-        "feature-3": {
-          "type": "feature",
-          "settings": {
-            "icon": "shield",
-            "title": "Secure Payments",
-            "description": "256-bit SSL encryption on every order."
-          }
-        },
-        "feature-4": {
-          "type": "feature",
-          "settings": {
-            "icon": "star",
-            "title": "Quality Guaranteed",
-            "description": "Every product tested before it hits the shelves."
-          }
-        }
-      },
-      "block_order": ["feature-1", "feature-2", "feature-3", "feature-4"],
-      "settings": {}
     }
   },
-  "order": ["main-collection", "features-usp"]
+  "order": ["main-collection"]
 }
