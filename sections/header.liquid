@@ -1,3 +1,7 @@
+<style>
+  .nav-logo-image { height: {{ section.settings.logo_height }}px; }
+</style>
+
 <header class="site-header" role="banner">
   <div class="container nav-inner">
 
@@ -74,6 +78,16 @@
       "type": "image_picker",
       "id": "logo",
       "label": "Logo image"
+    },
+    {
+      "type": "range",
+      "id": "logo_height",
+      "min": 24,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Logo height",
+      "default": 48
     },
     {
       "type": "link_list",

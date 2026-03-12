@@ -66,7 +66,7 @@ button{font:inherit;cursor:pointer;border:none;background:none}
 .site-header{position:sticky;top:0;z-index:100;background:rgba(247,245,242,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--color-border)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:24px}
 .nav-logo{display:flex;align-items:center;flex-shrink:0}
-.nav-logo img{height:44px;width:44px;border-radius:50%;object-fit:cover;display:block}
+.nav-logo-image{display:block;height:48px;width:auto;max-width:200px;object-fit:contain}
 .nav-logo-text{font-size:1.1rem;font-weight:800;letter-spacing:-.03em;color:var(--color-text);margin-left:10px;line-height:1.1}
 .nav-logo-sub{font-size:.65rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-text-muted)}
 .nav-links{display:flex;align-items:center;gap:4px;flex:1;justify-content:center}
@@ -395,7 +395,7 @@ button{font:inherit;cursor:pointer;border:none;background:none}
 <header class="site-header">
   <div class="container nav-inner">
     <a href="#" class="nav-logo" aria-label="G-Box Freeze Dried Candy">
-      <img src="assets/Gboxlogo3.png" alt="G-Box Freeze Dried Candy logo" style="height:44px;width:44px;border-radius:50%;">
+      <img src="assets/Gboxlogo3.png" alt="G-Box Freeze Dried Candy logo" class="nav-logo-image">
       <div style="margin-left:10px;line-height:1.15">
         <div style="font-size:1rem;font-weight:800;letter-spacing:-.03em;color:var(--color-text)">G-BOX</div>
         <div style="font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--color-text-muted)">Freeze Dried Candy</div>
