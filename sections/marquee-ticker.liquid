@@ -1,5 +1,5 @@
 <div class="marquee-section" aria-hidden="true">
-  <div class="marquee-track">
+  <div class="marquee-track" style="animation-duration: {{ section.settings.speed }}s">
     {%- for i in (1..8) -%}
       <span class="marquee-item">
         {{ section.settings.text_1 }}
@@ -42,6 +42,17 @@
       "id": "text_4",
       "label": "Item 4",
       "default": "New Drops Weekly"
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "s",
+      "label": "Scroll speed",
+      "info": "Lower = faster, higher = slower",
+      "default": 25
     }
   ],
   "presets": [
