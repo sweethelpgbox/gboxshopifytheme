@@ -18,7 +18,7 @@
         "type": "announcement-bar",
         "settings": {
           "show_announcement": true,
-          "text": "<p>Free shipping on orders over $75 \u00b7 <a href='/collections/all'>Shop now \u2192<\/a><\/p>"
+          "text": "<p>Free shipping on orders over $39 · <a href=\"/collections/all\">Shop now →</a></p>"
         }
       },
       "header": {
@@ -41,7 +41,8 @@
           "legal_text": "All rights reserved."
         }
       }
-    }
+    },
+    "content_for_index": []
   },
   "presets": {}
 }
