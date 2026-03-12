@@ -1,9 +1,39 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "color_accent": "#ff2d55",
     "color_accent_2": "#00c2cb",
     "color_background": "#f7f5f2",
-    "color_text": "#1a1714"
+    "color_text": "#1a1714",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify://shop_images/Gboxlogo_fixed2.png",
+          "menu": "main-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "brand_desc": "Premium gear for people who move fast. As seen on TikTok.",
+          "social_tiktok": "",
+          "social_instagram": "",
+          "social_twitter": "",
+          "social_youtube": "",
+          "legal_text": "All rights reserved."
+        }
+      }
+    },
+    "content_for_index": []
   },
   "presets": {}
 }
