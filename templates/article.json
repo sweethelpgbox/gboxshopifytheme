@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "main-article": {
+      "type": "main-article",
+      "settings": {
+        "show_image": true,
+        "show_author": true,
+        "show_tags": true,
+        "show_share": true,
+        "show_sidebar": true
+      }
+    }
+  },
+  "order": ["main-article"]
+}

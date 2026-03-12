@@ -1,0 +1,150 @@
+<article class="section main-article" id="main-article-{{ section.id }}">
+  <div class="container">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+      <a href="/">Home</a> &rsaquo;
+      <a href="{{ blog.url }}">{{ blog.title }}</a> &rsaquo;
+      <span>{{ article.title }}</span>
+    </nav>
+
+    <div class="article-layout">
+      <div class="article-body">
+
+        <!-- Header -->
+        <header class="article-header">
+          {%- if section.settings.show_tags and article.tags.size > 0 -%}
+            <div class="article-tags" style="margin-bottom:12px">
+              {%- for tag in article.tags -%}
+                <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="article-tag">{{ tag }}</a>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+          <h1 class="article-title">{{ article.title }}</h1>
+          <div class="article-meta">
+            {%- if section.settings.show_author -%}
+              <span>By {{ article.author }}</span>
+              <span class="article-meta-sep">·</span>
+            {%- endif -%}
+            <time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">
+              {{ article.published_at | date: '%B %d, %Y' }}
+            </time>
+            {%- if article.read_time -%}
+              <span class="article-meta-sep">·</span>
+              <span>{{ article.read_time }} min read</span>
+            {%- endif -%}
+          </div>
+        </header>
+
+        <!-- Featured image -->
+        {%- if article.image and section.settings.show_image -%}
+          <div class="article-featured-image">
+            {{
+              article.image
+              | image_url: width: 1200
+              | image_tag: loading: 'eager', alt: article.image.alt | escape
+            }}
+          </div>
+        {%- endif -%}
+
+        <!-- Content -->
+        <div class="article-content rte">
+          {{ article.content }}
+        </div>
+
+        <!-- Share -->
+        {%- if section.settings.show_share -%}
+          <div class="article-share">
+            <span>Share this post:</span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ shop.url }}{{ article.url }}" target="_blank" rel="noopener" class="article-share-btn">Facebook</a>
+            <a href="https://twitter.com/intent/tweet?url={{ shop.url }}{{ article.url }}&text={{ article.title | url_encode }}" target="_blank" rel="noopener" class="article-share-btn">Twitter</a>
+          </div>
+        {%- endif -%}
+
+        <!-- Prev / next -->
+        <nav class="article-nav">
+          {%- if blog.previous_article -%}
+            <a href="{{ blog.previous_article }}" class="article-nav-link">
+              <span class="article-nav-label">← Previous</span>
+              <span class="article-nav-title">{{ blog.previous_article.title }}</span>
+            </a>
+          {%- else -%}
+            <span></span>
+          {%- endif -%}
+          {%- if blog.next_article -%}
+            <a href="{{ blog.next_article }}" class="article-nav-link article-nav-link--next">
+              <span class="article-nav-label">Next →</span>
+              <span class="article-nav-title">{{ blog.next_article.title }}</span>
+            </a>
+          {%- endif -%}
+        </nav>
+
+      </div>
+
+      <!-- Sidebar -->
+      {%- if section.settings.show_sidebar -%}
+        <aside class="article-sidebar">
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Recent Posts</h3>
+            {%- for a in blog.articles limit: 5 -%}
+              <a href="{{ a.url }}" class="sidebar-post {% if a.handle == article.handle %}active{% endif %}">
+                <span class="sidebar-post-title">{{ a.title }}</span>
+                <time class="sidebar-post-date">{{ a.published_at | date: '%b %d' }}</time>
+              </a>
+            {%- endfor -%}
+          </div>
+          {%- if blog.all_tags.size > 0 -%}
+            <div class="sidebar-widget">
+              <h3 class="sidebar-widget-title">Tags</h3>
+              <div class="blog-tags">
+                {%- for tag in blog.all_tags -%}
+                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="blog-tag">{{ tag }}</a>
+                {%- endfor -%}
+              </div>
+            </div>
+          {%- endif -%}
+        </aside>
+      {%- endif -%}
+    </div>
+
+  </div>
+</article>
+
+{% schema %}
+{
+  "name": "Article",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_image",
+      "label": "Show featured image",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_author",
+      "label": "Show author",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tags",
+      "label": "Show tags",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_share",
+      "label": "Show share buttons",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sidebar",
+      "label": "Show sidebar",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

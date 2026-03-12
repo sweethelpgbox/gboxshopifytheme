@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "main-404": {
+      "type": "main-404",
+      "settings": {
+        "emoji": "🍬",
+        "heading": "Page not found",
+        "subheading": "Oops — looks like this page got freeze-dried and disappeared. Let's get you back on track.",
+        "show_search": true
+      }
+    }
+  },
+  "order": ["main-404"]
+}
