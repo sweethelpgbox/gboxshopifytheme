@@ -24,7 +24,7 @@
       "name": "Hero",
       "settings": {
         "eyebrow": "New Collection",
-        "heading": "<p>Gear Up for <em>Epic</em> Adventures</p>",
+        "heading": "<p>Gear Up for s<em>Epic d</em> Addventur<em>esd</em></p>",
         "subheading": "Discover our latest collection of premium gear built for performance and style.",
         "cta_primary_label": "Shop Now",
         "cta_primary_url": "",
@@ -39,13 +39,23 @@
         "stat_3_label": "TikTok views"
       }
     },
+    "marquee_ticker_qg3Wdd": {
+      "type": "marquee-ticker",
+      "name": "Marquee Ticker",
+      "settings": {
+        "text_1": "Free Shipping Over $75",
+        "text_2": "Easy 30-Day Returns",
+        "text_3": "Trending on TikTok",
+        "text_4": "New Drops Weekly"
+      }
+    },
     "tiktok_videos_NDEUid": {
       "type": "tiktok-videos",
       "blocks": {
         "video_qgqXNB": {
           "type": "video",
           "settings": {
-            "video_url": "",
+            "video_url": "https://www.tiktok.com/@gboxfreezedry/video/7567049134096600350",
             "caption": "Check out our latest drop! 🔥 #gbox #fyp",
             "likes": "12.4K",
             "views": "248K",
@@ -81,52 +91,76 @@
             "views": "248K",
             "linked_product": ""
           }
-        },
-        "video_GQJ9Hk": {
-          "type": "video",
-          "settings": {
-            "video_url": "",
-            "caption": "Check out our latest drop! 🔥 #gbox #fyp",
-            "likes": "12.4K",
-            "views": "248K",
-            "linked_product": ""
-          }
-        },
-        "video_yzNaGg": {
-          "type": "video",
-          "settings": {
-            "video_url": "",
-            "caption": "Check out our latest drop! 🔥 #gbox #fyp",
-            "likes": "12.4K",
-            "views": "248K",
-            "linked_product": ""
-          }
         }
       },
       "block_order": [
         "video_qgqXNB",
         "video_gUCFyk",
         "video_VPiNqf",
-        "video_MQYfbH",
-        "video_GQJ9Hk",
-        "video_yzNaGg"
+        "video_MQYfbH"
       ],
       "name": "TikTok Videos",
       "settings": {
         "heading": "Watch Us on TikTok",
         "subheading": "Real customers, real reviews — follow along for exclusive drops and behind-the-scenes content.",
-        "tiktok_handle": "yourbrand",
+        "tiktok_handle": "gboxfreezedry",
         "cta_label": "See more on TikTok"
       }
     },
-    "marquee_ticker_qg3Wdd": {
-      "type": "marquee-ticker",
-      "name": "Marquee Ticker",
+    "features_usp_9MyAzk": {
+      "type": "features-usp",
+      "blocks": {
+        "feature_hFHg8a": {
+          "type": "feature",
+          "settings": {
+            "icon": "truck",
+            "title": "Free Shipping",
+            "description": "Free standard shipping on orders over $75. Express available at checkout."
+          }
+        },
+        "feature_XwUwGy": {
+          "type": "feature",
+          "settings": {
+            "icon": "return",
+            "title": "Easy Returns",
+            "description": "Not happy? Return any item within 30 days, hassle-free."
+          }
+        },
+        "feature_WYnk94": {
+          "type": "feature",
+          "settings": {
+            "icon": "shield",
+            "title": "Secure Payments",
+            "description": "Your payment info is always protected with 256-bit SSL encryption."
+          }
+        },
+        "feature_kgTLqa": {
+          "type": "feature",
+          "settings": {
+            "icon": "star",
+            "title": "Quality Guaranteed",
+            "description": "Every product is curated and tested by our team before it hits the shelves."
+          }
+        }
+      },
+      "block_order": [
+        "feature_hFHg8a",
+        "feature_XwUwGy",
+        "feature_WYnk94",
+        "feature_kgTLqa"
+      ],
+      "name": "Features / USP",
+      "settings": {}
+    },
+    "newsletter_R3fNge": {
+      "type": "newsletter",
+      "disabled": true,
+      "name": "Newsletter / CTA",
       "settings": {
-        "text_1": "Free Shipping Over $75",
-        "text_2": "Easy 30-Day Returns",
-        "text_3": "Trending on TikTok",
-        "text_4": "New Drops Weekly"
+        "heading": "Get Early Access to New Drops",
+        "subheading": "Join 50,000+ subscribers and be first to know about sales and new arrivals.",
+        "placeholder": "Your email address...",
+        "button_label": "Subscribe"
       }
     }
   },
@@ -134,6 +168,8 @@
     "main-404",
     "hero_Tcd9QD",
     "marquee_ticker_qg3Wdd",
-    "tiktok_videos_NDEUid"
+    "tiktok_videos_NDEUid",
+    "features_usp_9MyAzk",
+    "newsletter_R3fNge"
   ]
 }
