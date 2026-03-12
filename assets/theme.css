@@ -1193,3 +1193,24 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .customer-address-panel { background: var(--color-bg-muted); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 28px; }
 @media (max-width: 900px) { .customer-account-layout { grid-template-columns: 1fr; } .order-layout { grid-template-columns: 1fr; } }
 @media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } .addresses-grid { grid-template-columns: 1fr; } .orders-table th:nth-child(3), .orders-table td:nth-child(3) { display: none; } }
+
+/* ---------- Collection List ---------- */
+.collections-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.collection-card { display: block; text-decoration: none; border-radius: var(--radius-lg); overflow: hidden; }
+.collection-card-media { position: relative; aspect-ratio: 4/3; overflow: hidden; background: var(--color-bg-muted); }
+.collection-card-media img,
+.collection-card-media .placeholder-svg { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+.collection-card:hover .collection-card-media img { transform: scale(1.05); }
+.collection-card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.65) 0%, rgba(0,0,0,.1) 60%); display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding: 24px; text-align: center; }
+.collection-card-title { color: #fff; font-size: 1.2rem; font-weight: 800; margin-bottom: 4px; }
+.collection-card-count { color: rgba(255,255,255,.8); font-size: .82rem; margin-bottom: 12px; }
+.collection-card-cta { display: inline-block; padding: 6px 18px; border: 2px solid #fff; border-radius: var(--radius-full); color: #fff; font-size: .82rem; font-weight: 700; letter-spacing: .04em; transition: background var(--transition); }
+.collection-card:hover .collection-card-cta { background: rgba(255,255,255,.2); }
+
+/* ---------- Page content widths ---------- */
+.page-content--narrow { max-width: 640px; margin-inline: auto; }
+.page-content--medium { max-width: 800px; margin-inline: auto; }
+.page-content--full { max-width: 100%; }
+
+@media (max-width: 900px) { .collections-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .collections-grid { grid-template-columns: 1fr; } }
