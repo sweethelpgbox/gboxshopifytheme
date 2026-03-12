@@ -1,4 +1,4 @@
-{%- paginate collections.all by section.settings.collections_per_page -%}
+{%- paginate collections by section.settings.collections_per_page -%}
 <section class="section main-list-collections" id="main-list-collections-{{ section.id }}">
   <div class="container">
 
@@ -7,7 +7,7 @@
     </header>
 
     <div class="collections-grid">
-      {%- for collection in collections.all -%}
+      {%- for collection in collections -%}
         <a href="{{ collection.url }}" class="collection-card">
           <div class="collection-card-media">
             {%- if collection.image -%}
