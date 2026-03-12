@@ -44,7 +44,8 @@
           }
         }
       },
-      "block_order": ["feature-1", "feature-2", "feature-3", "feature-4"]
+      "block_order": ["feature-1", "feature-2", "feature-3", "feature-4"],
+      "settings": {}
     }
   },
   "order": ["main-product", "features-usp"]
