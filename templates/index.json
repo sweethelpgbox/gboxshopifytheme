@@ -1,12 +1,5 @@
 {
   "sections": {
-    "announcement-bar": {
-      "type": "announcement-bar",
-      "settings": {
-        "show_announcement": true,
-        "text": "<p>Free shipping on orders over $75 &nbsp;·&nbsp; <a href='/collections/all'>Shop now →</a></p>"
-      }
-    },
     "hero": {
       "type": "hero",
       "settings": {
