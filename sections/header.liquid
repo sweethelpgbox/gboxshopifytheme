@@ -17,6 +17,12 @@
         {{ shop.name | split: '' | first }}
         <span class="logo-dot">BOX</span>
       {%- endif -%}
+      {%- if section.settings.show_tagline -%}
+        <div style="margin-left:10px;line-height:1.15">
+          <div style="font-size:1rem;font-weight:800;letter-spacing:-.03em;color:var(--color-text)">{{ shop.name }}</div>
+          <div style="font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--color-text-muted)">{{ section.settings.tagline }}</div>
+        </div>
+      {%- endif -%}
     </a>
 
     <!-- Nav links -->
@@ -88,6 +94,18 @@
       "unit": "px",
       "label": "Logo height",
       "default": 48
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tagline",
+      "label": "Show name & tagline next to logo",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline text",
+      "default": "Freeze Dried Candy"
     },
     {
       "type": "link_list",
