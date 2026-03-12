@@ -1,4 +1,38 @@
 {
-  "current": {},
+  "current": {
+    "color_accent": "#ff2d55",
+    "color_accent_2": "#00c2cb",
+    "color_background": "#f7f5f2",
+    "color_text": "#1a1714",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "show_announcement": true,
+          "text": "<p>Free shipping on orders over $75 \u00b7 <a href='/collections/all'>Shop now \u2192<\/a><\/p>"
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo_height": 52,
+          "show_tagline": false,
+          "tagline": "Freeze Dried Candy",
+          "menu": "main-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "brand_desc": "Premium freeze dried candy. As seen on TikTok.",
+          "social_tiktok": "",
+          "social_instagram": "",
+          "social_twitter": "",
+          "social_youtube": "",
+          "legal_text": "All rights reserved."
+        }
+      }
+    }
+  },
   "presets": {}
 }

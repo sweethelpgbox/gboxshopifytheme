@@ -11,7 +11,12 @@
     {{ 'theme.css' | asset_url | stylesheet_tag }}
   </head>
   <body>
-    {{ content_for_layout }}
+    {%- section 'announcement-bar' -%}
+    {%- section 'header' -%}
+    <main id="main-content" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+    {%- section 'footer' -%}
     <script src="{{ 'theme.js' | asset_url }}" defer></script>
   </body>
 </html>

@@ -6,5 +6,45 @@
     "theme_author": "GBOX",
     "theme_documentation_url": "",
     "theme_support_url": ""
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_accent",
+        "label": "Accent color",
+        "default": "#ff2d55"
+      },
+      {
+        "type": "color",
+        "id": "color_accent_2",
+        "label": "Accent color 2 (TikTok cyan)",
+        "default": "#00c2cb"
+      },
+      {
+        "type": "color",
+        "id": "color_background",
+        "label": "Page background",
+        "default": "#f7f5f2"
+      },
+      {
+        "type": "color",
+        "id": "color_text",
+        "label": "Body text",
+        "default": "#1a1714"
+      }
+    ]
+  },
+  {
+    "name": "Favicon",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon image",
+        "info": "32 x 32px .png recommended"
+      }
+    ]
   }
 ]
