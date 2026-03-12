@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main-cart": {
+      "type": "main-cart",
+      "settings": {
+        "show_shipping_note": true,
+        "shipping_note": "Shipping & taxes calculated at checkout.",
+        "show_note": false
+      }
+    }
+  },
+  "order": ["main-cart"]
+}
