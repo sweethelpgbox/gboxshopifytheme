@@ -2,6 +2,7 @@
   "sections": {
     "hero": {
       "type": "hero",
+      "name": "Hero",
       "settings": {
         "eyebrow": "New Collection",
         "heading": "<p>Gear Up for <em>Epic</em> Adventures</p>",
@@ -9,11 +10,11 @@
         "cta_primary_label": "Shop Now",
         "cta_primary_url": "/collections/all",
         "cta_secondary_label": "See TikTok Videos",
-        "cta_secondary_url": "#tiktok",
+        "cta_secondary_url": "/collections/all",
         "show_stats": true,
         "stat_1_value": "50K+",
         "stat_1_label": "Happy customers",
-        "stat_2_value": "4.9★",
+        "stat_2_value": "4.9\u2605",
         "stat_2_label": "Average rating",
         "stat_3_value": "1M+",
         "stat_3_label": "TikTok views"
@@ -21,27 +22,31 @@
     },
     "marquee": {
       "type": "marquee-ticker",
+      "name": "Marquee Ticker",
       "settings": {
         "text_1": "Free Shipping Over $75",
         "text_2": "Easy 30-Day Returns",
         "text_3": "Trending on TikTok",
-        "text_4": "New Drops Weekly"
+        "text_4": "New Drops Weekly",
+        "speed": 25
       }
     },
-    "featured-collection": {
+    "featured_collection": {
       "type": "featured-collection",
+      "name": "Featured Collection",
       "settings": {
-        "badge": "🔥 Trending",
+        "badge": "Trending",
         "heading": "Shop the Drop",
-        "subheading": "As seen on TikTok — grab yours before it sells out.",
+        "subheading": "As seen on TikTok \u2014 grab yours before it sells out.",
         "products_to_show": 4,
         "view_all_label": "View all products"
       }
     },
-    "features-usp": {
+    "features_usp": {
       "type": "features-usp",
+      "name": "Features / USP",
       "blocks": {
-        "feature-1": {
+        "feature_1": {
           "type": "feature",
           "settings": {
             "icon": "truck",
@@ -49,7 +54,7 @@
             "description": "Free standard shipping on orders over $75. Express available at checkout."
           }
         },
-        "feature-2": {
+        "feature_2": {
           "type": "feature",
           "settings": {
             "icon": "return",
@@ -57,7 +62,7 @@
             "description": "Not happy? Return any item within 30 days, hassle-free."
           }
         },
-        "feature-3": {
+        "feature_3": {
           "type": "feature",
           "settings": {
             "icon": "shield",
@@ -65,7 +70,7 @@
             "description": "Your payment info is always protected with 256-bit SSL encryption."
           }
         },
-        "feature-4": {
+        "feature_4": {
           "type": "feature",
           "settings": {
             "icon": "star",
@@ -74,70 +79,73 @@
           }
         }
       },
-      "block_order": ["feature-1", "feature-2", "feature-3", "feature-4"]
+      "block_order": ["feature_1", "feature_2", "feature_3", "feature_4"],
+      "settings": {}
     },
-    "tiktok-videos": {
+    "tiktok_videos": {
       "type": "tiktok-videos",
-      "settings": {
-        "heading": "Watch Us on TikTok",
-        "subheading": "Real customers, real reviews — follow along for exclusive drops and behind-the-scenes content.",
-        "tiktok_handle": "yourbrand",
-        "cta_label": "See more on TikTok"
-      },
+      "name": "TikTok Videos",
       "blocks": {
-        "video-1": {
+        "video_1": {
           "type": "video",
           "settings": {
-            "caption": "Check out our latest drop! 🔥 #gbox #fyp",
+            "caption": "Check out our latest drop! #gbox #fyp",
             "likes": "12.4K",
             "views": "248K"
           }
         },
-        "video-2": {
+        "video_2": {
           "type": "video",
           "settings": {
-            "caption": "Behind the scenes at our warehouse 📦 #shipping #smallbusiness",
+            "caption": "Behind the scenes at our warehouse #shipping #smallbusiness",
             "likes": "8.1K",
             "views": "195K"
           }
         },
-        "video-3": {
+        "video_3": {
           "type": "video",
           "settings": {
-            "caption": "Customer unboxing reaction 😍 #unboxing #haul",
+            "caption": "Customer unboxing reaction #unboxing #haul",
             "likes": "21.2K",
             "views": "512K"
           }
         },
-        "video-4": {
+        "video_4": {
           "type": "video",
           "settings": {
-            "caption": "Limited edition collab dropping Friday 👀 #collab #limitededition",
+            "caption": "Limited edition collab dropping Friday #collab #limitededition",
             "likes": "16.7K",
             "views": "380K"
           }
         },
-        "video-5": {
+        "video_5": {
           "type": "video",
           "settings": {
-            "caption": "How to style your new gear 🎒 #style #ootd",
+            "caption": "How to style your new gear #style #ootd",
             "likes": "9.8K",
             "views": "221K"
           }
         },
-        "video-6": {
+        "video_6": {
           "type": "video",
           "settings": {
-            "caption": "Flash sale starts NOW — link in bio! ⚡ #sale #deals",
+            "caption": "Flash sale starts NOW \u2014 link in bio! #sale #deals",
             "likes": "31.5K",
             "views": "720K"
           }
         }
       },
-      "block_order": ["video-1", "video-2", "video-3", "video-4", "video-5", "video-6"]
+      "block_order": ["video_1", "video_2", "video_3", "video_4", "video_5", "video_6"],
+      "settings": {
+        "heading": "Watch Us on TikTok",
+        "subheading": "Real customers, real reviews \u2014 follow along for exclusive drops and behind-the-scenes content.",
+        "tiktok_handle": "gboxfreezedry",
+        "cta_label": "See more on TikTok"
+      }
     },
     "newsletter": {
       "type": "newsletter",
+      "name": "Newsletter / CTA",
       "settings": {
         "heading": "Get Early Access to New Drops",
         "subheading": "Join 50,000+ subscribers and be first to know about sales and new arrivals.",
@@ -149,9 +157,9 @@
   "order": [
     "hero",
     "marquee",
-    "featured-collection",
-    "features-usp",
-    "tiktok-videos",
+    "featured_collection",
+    "features_usp",
+    "tiktok_videos",
     "newsletter"
   ]
 }
