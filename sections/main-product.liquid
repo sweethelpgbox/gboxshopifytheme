@@ -76,24 +76,28 @@
           </div>
         {%- endunless -%}
 
-        <div class="product-quantity-row">
-          <label class="variant-label" for="ProductQuantity">Quantity</label>
-          <div class="quantity-selector">
-            <button class="qty-btn" data-action="decrease" aria-label="Decrease quantity">−</button>
-            <input id="ProductQuantity" class="qty-input" type="number" name="quantity" value="1" min="1">
-            <button class="qty-btn" data-action="increase" aria-label="Increase quantity">+</button>
-          </div>
-        </div>
+        <form action="/cart/add" method="post" id="ProductForm" novalidate>
+          <input type="hidden" name="id" id="ProductVariantId" value="{{ current_variant.id }}">
 
-        <div class="product-actions">
-          {%- if current_variant.available -%}
-            <button class="btn btn-primary btn-full" id="AddToCart" data-variant-id="{{ current_variant.id }}">
-              Add to Cart — {{ current_variant.price | money }}
-            </button>
-          {%- else -%}
-            <button class="btn btn-primary btn-full" disabled>Sold Out</button>
-          {%- endif -%}
-        </div>
+          <div class="product-quantity-row">
+            <label class="variant-label" for="ProductQuantity">Quantity</label>
+            <div class="quantity-selector">
+              <button type="button" class="qty-btn" data-action="decrease" aria-label="Decrease quantity">−</button>
+              <input id="ProductQuantity" class="qty-input" type="number" name="quantity" value="1" min="1">
+              <button type="button" class="qty-btn" data-action="increase" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+
+          <div class="product-actions">
+            {%- if current_variant.available -%}
+              <button type="submit" class="btn btn-primary btn-full" id="AddToCart">
+                Add to Cart — {{ current_variant.price | money }}
+              </button>
+            {%- else -%}
+              <button type="submit" class="btn btn-primary btn-full" disabled>Sold Out</button>
+            {%- endif -%}
+          </div>
+        </form>
 
         {%- if section.settings.show_description and product.description != blank -%}
           <div class="product-description rte">
@@ -142,8 +146,9 @@
       var priceEl = document.getElementById('ProductPrice');
       var addBtn = document.getElementById('AddToCart');
       if (priceEl) priceEl.textContent = formatMoney(match.price);
+      var variantInput = document.getElementById('ProductVariantId');
+      if (variantInput) variantInput.value = match.id;
       if (addBtn) {
-        addBtn.dataset.variantId = match.id;
         addBtn.disabled = !match.available;
         addBtn.textContent = match.available ? 'Add to Cart — ' + formatMoney(match.price) : 'Sold Out';
       }

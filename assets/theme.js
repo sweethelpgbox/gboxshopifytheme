@@ -48,6 +48,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ---- Product page — Add to Cart form ---- */
+  const productForm = document.getElementById('ProductForm');
+  if (productForm) {
+    productForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const btn = productForm.querySelector('#AddToCart');
+      const originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Adding...';
+
+      const variantId = productForm.querySelector('#ProductVariantId').value;
+      const quantity  = parseInt(productForm.querySelector('#ProductQuantity').value) || 1;
+
+      fetch('/cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ items: [{ id: variantId, quantity }] })
+      })
+      .then(r => r.json())
+      .then(() => {
+        btn.textContent = 'Added to Cart!';
+        return fetch('/cart.js');
+      })
+      .then(r => r.json())
+      .then(cart => {
+        const countEl = document.querySelector('.cart-count');
+        if (countEl) countEl.textContent = cart.item_count;
+        setTimeout(() => {
+          btn.disabled = false;
+          btn.textContent = originalText;
+        }, 2000);
+      })
+      .catch(() => {
+        btn.disabled = false;
+        btn.textContent = originalText;
+      });
+    });
+  }
+
   /* ---- Product quick-add ---- */
   document.querySelectorAll('.product-card-quick-add').forEach(btn => {
     btn.addEventListener('click', e => {
