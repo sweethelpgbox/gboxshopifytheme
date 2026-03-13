@@ -31,6 +31,7 @@
         role="region"
         aria-label="{{ 'sections.header.announcement' | t }}"
         {{ section.blocks.first.shopify_attributes }}
+        {% if section.blocks.first.settings.bg_color != blank %}style="background-color: {{ section.blocks.first.settings.bg_color }}; font-size: {{ section.blocks.first.settings.font_size }}px;"{% else %}style="font-size: {{ section.blocks.first.settings.font_size }}px;"{% endif %}
       >
         {%- if section.blocks.first.settings.text != blank -%}
           {%- if section.blocks.first.settings.link != blank -%}
@@ -91,6 +92,7 @@
                   class="announcement-bar__announcement"
                   role="region"
                   aria-label="{{ 'sections.header.announcement' | t }}"
+                  {% if block.settings.bg_color != blank %}style="background-color: {{ block.settings.bg_color }}; font-size: {{ block.settings.font_size }}px;"{% else %}style="font-size: {{ block.settings.font_size }}px;"{% endif %}
                 >
                   {%- if block.settings.text != blank -%}
                     {%- if block.settings.link != blank -%}
@@ -244,6 +246,21 @@
           "type": "url",
           "id": "link",
           "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
+        },
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background color"
+        },
+        {
+          "type": "range",
+          "id": "font_size",
+          "min": 10,
+          "max": 20,
+          "step": 1,
+          "unit": "px",
+          "label": "Font size",
+          "default": 14
         }
       ]
     }
