@@ -1,0 +1,220 @@
+{{ 'shop-by-vibe.css' | asset_url | stylesheet_tag }}
+
+<style>
+  #section-{{ section.id }} {
+    --sbv-badge-bg: {{ section.settings.badge_bg }};
+    --sbv-badge-color: {{ section.settings.badge_text_color }};
+    --sbv-highlight-color: {{ section.settings.heading_highlight_color }};
+  }
+</style>
+
+<section class="sbv-section" id="section-{{ section.id }}">
+  <div class="sbv-container">
+
+    {%- if section.settings.badge_text != blank -%}
+      <div class="sbv-badge">
+        {%- if section.settings.badge_emoji != blank -%}
+          <span class="sbv-badge__emoji">{{ section.settings.badge_emoji }}</span>
+        {%- endif -%}
+        {{ section.settings.badge_text }}
+      </div>
+    {%- endif -%}
+
+    <div class="sbv-header">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="sbv-heading">
+          {{ section.settings.heading }}
+          {%- if section.settings.heading_highlight != blank -%}
+            <span class="sbv-heading__highlight">{{ section.settings.heading_highlight }}</span>
+          {%- endif -%}
+        </h2>
+      {%- endif -%}
+      {%- if section.settings.subheading != blank -%}
+        <p class="sbv-subheading">{{ section.settings.subheading }}</p>
+      {%- endif -%}
+    </div>
+
+    <div class="sbv-cards-track">
+      <div class="sbv-cards">
+        {%- for block in section.blocks -%}
+          <a
+            class="sbv-card"
+            href="{{ block.settings.link | default: '#' }}"
+            style="--card-grad: {{ block.settings.gradient }};"
+            {{ block.shopify_attributes }}
+          >
+            {%- if block.settings.emoji != blank -%}
+              <span class="sbv-card__emoji" aria-hidden="true">{{ block.settings.emoji }}</span>
+            {%- endif -%}
+            <div class="sbv-card__body">
+              {%- if block.settings.title != blank -%}
+                <p class="sbv-card__title">{{ block.settings.title }}</p>
+              {%- endif -%}
+              {%- if block.settings.subtitle != blank -%}
+                <p class="sbv-card__subtitle">{{ block.settings.subtitle }}</p>
+              {%- endif -%}
+            </div>
+          </a>
+        {%- endfor -%}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Shop by Vibe",
+  "tag": "section",
+  "class": "shop-by-vibe",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge_emoji",
+      "label": "Badge emoji",
+      "default": "🤙"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge text",
+      "default": "SHOP BY VIBE"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading (plain part)",
+      "default": "Find Your"
+    },
+    {
+      "type": "text",
+      "id": "heading_highlight",
+      "label": "Heading (highlighted part)",
+      "default": "Flavor Mood"
+    },
+    {
+      "type": "color",
+      "id": "heading_highlight_color",
+      "label": "Highlight color",
+      "default": "#2a7c2a"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Pick a vibe, crunch accordingly."
+    },
+    {
+      "type": "color",
+      "id": "badge_bg",
+      "label": "Badge background",
+      "default": "#2a7c2a"
+    },
+    {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "Badge text color",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "vibe_card",
+      "name": "Vibe Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "emoji",
+          "label": "Emoji",
+          "default": "🌈"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Rainbow Rush"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Frettles & mixed flavors"
+        },
+        {
+          "type": "text",
+          "id": "gradient",
+          "label": "CSS gradient",
+          "info": "Paste a full CSS gradient value, e.g. linear-gradient(160deg, #43a047 0%, #ffee58 35%, #ef5350 65%, #5c6bc0 100%)",
+          "default": "linear-gradient(160deg, #43a047 0%, #ffee58 35%, #ef5350 65%, #5c6bc0 100%)"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shop by Vibe",
+      "blocks": [
+        {
+          "type": "vibe_card",
+          "settings": {
+            "emoji": "🌈",
+            "title": "Rainbow Rush",
+            "subtitle": "Frettles & mixed flavors",
+            "gradient": "linear-gradient(160deg, #43a047 0%, #ffee58 30%, #ffa726 50%, #42a5f5 75%, #7e57c2 100%)"
+          }
+        },
+        {
+          "type": "vibe_card",
+          "settings": {
+            "emoji": "🌶️",
+            "title": "Spicy Red",
+            "subtitle": "Chamoy & Tajin Frettles",
+            "gradient": "linear-gradient(170deg, #e53935 0%, #b71c1c 100%)"
+          }
+        },
+        {
+          "type": "vibe_card",
+          "settings": {
+            "emoji": "🍦",
+            "title": "Creamy Dream",
+            "subtitle": "Astronaut ice cream bites",
+            "gradient": "linear-gradient(170deg, #f5deb3 0%, #c8a97e 100%)"
+          }
+        },
+        {
+          "type": "vibe_card",
+          "settings": {
+            "emoji": "☁️",
+            "title": "Cloud Soft",
+            "subtitle": "Taffy puffs & marshmallows",
+            "gradient": "linear-gradient(170deg, #b3e5fc 0%, #80c8e8 100%)"
+          }
+        },
+        {
+          "type": "vibe_card",
+          "settings": {
+            "emoji": "🍋",
+            "title": "Citrus Burst",
+            "subtitle": "Lemon, peach & pineapple",
+            "gradient": "linear-gradient(170deg, #ffd740 0%, #ff8f00 100%)"
+          }
+        },
+        {
+          "type": "vibe_card",
+          "settings": {
+            "emoji": "🍇",
+            "title": "Wild Berry",
+            "subtitle": "Berry & tropical Frettles",
+            "gradient": "linear-gradient(135deg, #7b1fa2 0%, #e91e8c 100%)"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
