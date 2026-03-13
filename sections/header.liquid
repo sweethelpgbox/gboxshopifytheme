@@ -24,7 +24,7 @@
       {%- endif -%}
       {%- if section.settings.show_tagline -%}
         <div style="margin-left:12px;line-height:1.2;display:flex;flex-direction:column;justify-content:center">
-          <div style="font-size:1.5rem;font-weight:900;letter-spacing:-.01em;text-transform:uppercase;color:var(--color-text)">{{ shop.name }}</div>
+          <div style="font-size:1.5rem;font-weight:900;letter-spacing:-.01em;text-transform:uppercase;color:var(--color-text)">{{ section.settings.company_name }}</div>
           <div style="font-size:0.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--color-text-muted)">{{ section.settings.tagline }}</div>
         </div>
       {%- endif -%}
@@ -105,6 +105,12 @@
       "id": "show_tagline",
       "label": "Show name & tagline next to logo",
       "default": true
+    },
+    {
+      "type": "text",
+      "id": "company_name",
+      "label": "Company name",
+      "default": "G-BOX"
     },
     {
       "type": "text",
