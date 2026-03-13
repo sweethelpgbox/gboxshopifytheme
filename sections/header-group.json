@@ -11,6 +11,20 @@
   "name": "Header",
   "type": "header",
   "sections": {
+    "gbox_announcement_bar_H3nbBE": {
+      "type": "gbox-announcement-bar",
+      "name": "G-BOX Announcement Bar",
+      "settings": {
+        "show_bar": true,
+        "text": "",
+        "text2": "Free shipping on orders over $39",
+        "cta_text": "Shop now",
+        "cta_url": "",
+        "bg_color": "#2a7c2a",
+        "text_color": "#ffffff",
+        "font_size": 13
+      }
+    },
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
@@ -53,20 +67,6 @@
       "type": "_blocks",
       "name": "Free shipping progress",
       "settings": {}
-    },
-    "gbox_announcement_bar_H3nbBE": {
-      "type": "gbox-announcement-bar",
-      "name": "G-BOX Announcement Bar",
-      "settings": {
-        "show_bar": true,
-        "text": "🚀 New: Chamoy Frettles are here!",
-        "text2": "Free shipping on orders over $40",
-        "cta_text": "Shop now",
-        "cta_url": "",
-        "bg_color": "#2a7c2a",
-        "text_color": "#ffffff",
-        "font_size": 13
-      }
     }
   },
   "order": [
