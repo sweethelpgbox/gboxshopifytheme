@@ -19,7 +19,9 @@
           "disabled": true,
           "settings": {
             "text": "Free Shipping Over $39",
-            "link": ""
+            "link": "",
+            "bg_color": "",
+            "font_size": 14
           }
         }
       },
@@ -44,21 +46,31 @@
         "show_tagline": true,
         "company_name": "G-BOX",
         "tagline": "Freeze Dried Candy",
-        "menu": "main-menu",
-        "show_announcement": false,
-        "announcement_text": "Free shipping on orders over $50!",
-        "announcement_bg_color": "#000000",
-        "announcement_text_color": "#ffffff",
-        "announcement_font_size": 13
+        "menu": "main-menu"
       }
     },
     "blocks_DeKzzm": {
       "type": "_blocks",
       "name": "Free shipping progress",
       "settings": {}
+    },
+    "gbox_announcement_bar_H3nbBE": {
+      "type": "gbox-announcement-bar",
+      "name": "G-BOX Announcement Bar",
+      "settings": {
+        "show_bar": true,
+        "text": "🚀 New: Chamoy Frettles are here!",
+        "text2": "Free shipping on orders over $40",
+        "cta_text": "Shop now",
+        "cta_url": "",
+        "bg_color": "#2a7c2a",
+        "text_color": "#ffffff",
+        "font_size": 13
+      }
     }
   },
   "order": [
+    "gbox_announcement_bar_H3nbBE",
     "announcement-bar",
     "header",
     "blocks_DeKzzm"
