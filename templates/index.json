@@ -1,1 +1,580 @@
-{"sections": {"slideshow": {"type": "slideshow", "blocks": {"slide-0": {"type": "slide", "settings": {"image": "shopify://shop_images/01.jpg", "image_overlay_opacity": 10, "heading": "", "heading_size": "h2", "subheading": "", "button_label": "Shop Now", "link": "shopify://collections/taffy", "button_style_secondary": false, "show_text_box": false, "box_align": "bottom-right", "text_alignment": "center", "text_alignment_mobile": "center", "color_scheme": "background-2"}}, "slide_rET3PL": {"type": "slide", "settings": {"image": "shopify://shop_images/04_1.jpg", "image_overlay_opacity": 10, "heading": "", "heading_size": "h2", "subheading": "", "button_label": "Shop Now", "link": "shopify://collections/jello", "button_style_secondary": false, "show_text_box": false, "box_align": "bottom-center", "text_alignment": "center", "text_alignment_mobile": "center", "color_scheme": "background-2"}}, "slide_99Rxma": {"type": "slide", "settings": {"image": "shopify://shop_images/IMG_0202.jpg", "image_overlay_opacity": 10, "heading": "Get Our Monthly Subscription Box", "heading_size": "h2", "subheading": "", "button_label": "Shop Now", "link": "shopify://products/subscription-box", "button_style_secondary": false, "show_text_box": true, "box_align": "bottom-right", "text_alignment": "left", "text_alignment_mobile": "left", "color_scheme": "background-1"}}}, "block_order": ["slide-0", "slide_rET3PL", "slide_99Rxma"], "settings": {"layout": "full_bleed", "slide_height": "adapt_image", "slider_visual": "counter", "auto_rotate": false, "change_slides_speed": 5, "image_behavior": "none", "show_text_below": false, "accessibility_info": "Slideshow about our brand"}}, "featured-collection-0": {"type": "featured-collection", "settings": {"collection": "top-sellers", "products_to_show": 5, "title": "Top Sellers", "heading_size": "h1", "description": "", "show_description": false, "description_style": "body", "columns_desktop": 5, "enable_desktop_slider": false, "full_width": false, "show_view_all": false, "view_all_style": "solid", "color_scheme": "background-1", "image_ratio": "square", "image_shape": "default", "show_secondary_image": false, "show_vendor": false, "show_rating": false, "columns_mobile": "1", "swipe_on_mobile": false, "padding_top": 60, "padding_bottom": 60}}, "featured_product_GDPjwQ": {"type": "featured-product", "blocks": {"text_b4FJW3": {"type": "text", "settings": {"text": "", "text_style": "uppercase"}}, "title_myVf8c": {"type": "title", "settings": {"heading_size": "h2"}}, "price_tkzWQX": {"type": "price", "settings": {}}, "variant_picker_Hia7je": {"type": "variant_picker", "settings": {"picker_type": "button"}}, "quantity_selector_y4VVVq": {"type": "quantity_selector", "settings": {}}, "buy_buttons_p4QzYW": {"type": "buy_buttons", "settings": {"show_dynamic_checkout": true, "show_gift_card_recipient": true}}, "share_FB8b4M": {"type": "share", "settings": {"share_label": "Share"}}}, "block_order": ["text_b4FJW3", "title_myVf8c", "price_tkzWQX", "variant_picker_Hia7je", "quantity_selector_y4VVVq", "buy_buttons_p4QzYW", "share_FB8b4M"], "settings": {"product": "g-box-freeze-dried-fruity-crunch-rolls-candy-tiktok-trend-items-freeze-dried-candy-freeze-dried-strawberries-delightful-crunchy-fruity-flavorful-burst-air-tight-sealed-in-container", "color_scheme": "inverse", "secondary_background": false, "media_size": "medium", "constrain_to_viewport": true, "media_fit": "contain", "media_position": "left", "image_zoom": "lightbox", "hide_variants": false, "enable_video_looping": false, "padding_top": 28, "padding_bottom": 28}}, "featured_product_KyKHDK": {"type": "featured-product", "blocks": {"text_CtBY4F": {"type": "text", "settings": {"text": "", "text_style": "uppercase"}}, "title_AnAFHV": {"type": "title", "settings": {"heading_size": "h2"}}, "price_nJm7VW": {"type": "price", "settings": {}}, "variant_picker_QxULca": {"type": "variant_picker", "settings": {"picker_type": "button"}}, "quantity_selector_CEaWCp": {"type": "quantity_selector", "settings": {}}, "buy_buttons_LbwwfP": {"type": "buy_buttons", "settings": {"show_dynamic_checkout": true, "show_gift_card_recipient": true}}, "share_iq33nR": {"type": "share", "settings": {"share_label": "Share"}}}, "block_order": ["text_CtBY4F", "title_AnAFHV", "price_nJm7VW", "variant_picker_QxULca", "quantity_selector_CEaWCp", "buy_buttons_LbwwfP", "share_iq33nR"], "settings": {"product": "g-box-freeze-dried-chocolate-eclair-ice-cream-bites", "color_scheme": "background-1", "secondary_background": false, "media_size": "small", "constrain_to_viewport": true, "media_fit": "contain", "media_position": "right", "image_zoom": "lightbox", "hide_variants": false, "enable_video_looping": false, "padding_top": 28, "padding_bottom": 28}}, "slideshow_7McJGW": {"type": "slideshow", "blocks": {"slide_RqErTq": {"type": "slide", "settings": {"image": "shopify://shop_images/1_7.png", "image_overlay_opacity": 0, "heading": "Jello like you've never crunched before", "heading_size": "h1", "subheading": "G-Box turns the classic treat into a crispy, fruity delight.", "button_label": "Shop Now", "link": "", "button_style_secondary": false, "show_text_box": true, "box_align": "middle-center", "text_alignment": "center", "text_alignment_mobile": "center", "color_scheme": ""}}, "slide_PNUwzn": {"type": "slide", "settings": {"image": "shopify://shop_images/1_39eff597-5368-4e38-a5f0-0b67cbd02388.png", "image_overlay_opacity": 0, "heading": "No stick, all bliss", "heading_size": "h1", "subheading": "<strong>Taffy Puffs turn chewy classics into airy delights.</strong>", "button_label": "Shop Now", "link": "", "button_style_secondary": false, "show_text_box": true, "box_align": "middle-center", "text_alignment": "center", "text_alignment_mobile": "center", "color_scheme": ""}}}, "block_order": ["slide_RqErTq", "slide_PNUwzn"], "disabled": true, "settings": {"layout": "grid", "slide_height": "medium", "slider_visual": "dots", "auto_rotate": true, "change_slides_speed": 5, "image_behavior": "none", "show_text_below": true, "accessibility_info": "Slideshow about our brand"}}, "rich_text_HTUeD8": {"type": "rich-text", "blocks": {"heading_WVPVNi": {"type": "heading", "settings": {"heading": "<em><strong>G-BOX Freeze Dried Candy: </strong></em>                      Where sweets meet science", "heading_size": "h0"}}, "text_BD9HyN": {"type": "text", "settings": {"text": "<p>G-BOX Freeze Dried Candy brings a delightful twist to your favorite sweets by transforming them into light, crunchy, and irresistibly flavorful treats. Using advanced freeze-drying technology, GBOX removes moisture while locking in the original taste and color, resulting in a unique texture that melts in your mouth. From classic fruity candies to chewy taffies and marshmallows, GBOX offers a fun, airy crunch that candy lovers of all ages can enjoy. Unlike traditional candy, these treats have a longer shelf life and are perfect for snacking on the go, adding to gift baskets, or sharing at parties. Whether you're looking to explore new candy textures or searching for a low-mess alternative to sticky sweets, GBOX Freeze Dried Candy is a game-changer in the world of confections. Indulge in the sweet, crisp experience that\u2019s quickly becoming a favorite among adventurous snackers and sweet tooths alike.</p>"}}}, "block_order": ["heading_WVPVNi", "text_BD9HyN"], "settings": {"desktop_content_position": "center", "content_alignment": "center", "color_scheme": "background-1", "full_width": true, "padding_top": 40, "padding_bottom": 52}}, "17723204236c04b30c": {"type": "_blocks", "settings": {}}, "featured_product_9YcQWj": {"type": "featured-product", "blocks": {"text_C3bwYN": {"type": "text", "settings": {"text": "{{ section.settings.product.vendor }}", "text_style": "uppercase"}}, "title_yQ7mGn": {"type": "title", "settings": {"heading_size": "h1"}}, "price_BW7E8V": {"type": "price", "settings": {}}, "variant_picker_97AJcV": {"type": "variant_picker", "settings": {"picker_type": "button"}}, "quantity_selector_jbMwBk": {"type": "quantity_selector", "settings": {}}, "buy_buttons_eCr8kh": {"type": "buy_buttons", "settings": {"show_dynamic_checkout": true, "show_gift_card_recipient": true}}, "share_4Mgr4x": {"type": "share", "settings": {"share_label": "Share"}}}, "block_order": ["text_C3bwYN", "title_yQ7mGn", "price_BW7E8V", "variant_picker_97AJcV", "quantity_selector_jbMwBk", "buy_buttons_eCr8kh", "share_4Mgr4x"], "name": "t:sections.featured-product.presets.name", "settings": {"product": "g-box-freeze-dried-skittles-original-26966", "color_scheme": "", "secondary_background": false, "media_size": "medium", "constrain_to_viewport": true, "media_fit": "contain", "media_position": "left", "image_zoom": "lightbox", "hide_variants": false, "enable_video_looping": false, "padding_top": 36, "padding_bottom": 36}}, "marquee_ticker_gbox": {"type": "marquee-ticker", "settings": {"text_1": "Free Shipping Over $75", "text_2": "Easy 30-Day Returns", "text_3": "Trending on TikTok", "text_4": "New Drops Weekly", "speed": 25}}, "features_usp_gbox": {"type": "features-usp", "blocks": {"feature_truck": {"type": "feature", "settings": {"icon": "truck", "title": "Free Shipping", "description": "Free standard shipping on orders over $75. Express available at checkout."}}, "feature_return": {"type": "feature", "settings": {"icon": "return", "title": "Easy Returns", "description": "Not happy? Return any item within 30 days, hassle-free."}}, "feature_shield": {"type": "feature", "settings": {"icon": "shield", "title": "Secure Payments", "description": "Your payment info is always protected with 256-bit SSL encryption."}}, "feature_star": {"type": "feature", "settings": {"icon": "star", "title": "Quality Guaranteed", "description": "Every product is curated and tested by our team before it hits the shelves."}}}, "block_order": ["feature_truck", "feature_return", "feature_shield", "feature_star"], "settings": {}}, "tiktok_videos_gbox": {"type": "tiktok-videos", "blocks": {"video_1": {"type": "video", "settings": {"caption": "Check out our latest drop! \ud83d\udd25 #gbox #fyp", "likes": "12.4K", "views": "248K"}}, "video_2": {"type": "video", "settings": {"caption": "Freeze dried candy is unreal \ud83d\ude31 #freezedried #candy", "likes": "8.2K", "views": "195K"}}, "video_3": {"type": "video", "settings": {"caption": "You have to try this! #gboxcandy #tiktokfood", "likes": "15.1K", "views": "312K"}}, "video_4": {"type": "video", "settings": {"caption": "New flavors just dropped \ud83c\udf6c #gbox #candylovers", "likes": "9.8K", "views": "187K"}}, "video_5": {"type": "video", "settings": {"caption": "The crunch is everything \ud83d\udca5 #freezedriedcandy", "likes": "11.2K", "views": "224K"}}, "video_6": {"type": "video", "settings": {"caption": "Gift this to your bestie \ud83c\udf81 #gbox #candygift", "likes": "7.6K", "views": "153K"}}}, "block_order": ["video_1", "video_2", "video_3", "video_4", "video_5", "video_6"], "settings": {"heading": "Watch Us on TikTok", "subheading": "Real customers, real reviews \u2014 follow along for exclusive drops and behind-the-scenes content.", "tiktok_handle": "gboxcandy", "cta_label": "See more on TikTok"}}}, "order": ["slideshow", "marquee_ticker_gbox", "featured-collection-0", "features_usp_gbox", "featured_product_GDPjwQ", "featured_product_KyKHDK", "featured_product_9YcQWj", "slideshow_7McJGW", "tiktok_videos_gbox", "rich_text_HTUeD8", "17723204236c04b30c"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/01.jpg",
+            "image_overlay_opacity": 10,
+            "heading": "",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "Shop Now",
+            "link": "shopify://collections/taffy",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "bottom-right",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "background-2"
+          }
+        },
+        "slide_rET3PL": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/04_1.jpg",
+            "image_overlay_opacity": 10,
+            "heading": "",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "Shop Now",
+            "link": "shopify://collections/jello",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "bottom-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "background-2"
+          }
+        },
+        "slide_99Rxma": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/IMG_0202.jpg",
+            "image_overlay_opacity": 10,
+            "heading": "Get Our Monthly Subscription Box",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "Shop Now",
+            "link": "shopify://products/subscription-box",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "bottom-right",
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
+            "color_scheme": "background-1"
+          }
+        }
+      },
+      "block_order": [
+        "slide-0",
+        "slide_rET3PL",
+        "slide_99Rxma"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "marquee_ticker_gbox": {
+      "type": "marquee-ticker",
+      "settings": {
+        "text_1": "Free Shipping Over $75",
+        "text_2": "Easy 30-Day Returns",
+        "text_3": "Trending on TikTok",
+        "text_4": "New Drops Weekly",
+        "speed": 25
+      }
+    },
+    "featured-collection-0": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "top-sellers",
+        "products_to_show": 5,
+        "title": "Top Sellers",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 5,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "features_usp_gbox": {
+      "type": "features-usp",
+      "blocks": {
+        "feature_truck": {
+          "type": "feature",
+          "settings": {
+            "icon": "truck",
+            "title": "Free Shipping",
+            "description": "Free standard shipping on orders over $75. Express available at checkout."
+          }
+        },
+        "feature_return": {
+          "type": "feature",
+          "settings": {
+            "icon": "return",
+            "title": "Easy Returns",
+            "description": "Not happy? Return any item within 30 days, hassle-free."
+          }
+        },
+        "feature_shield": {
+          "type": "feature",
+          "settings": {
+            "icon": "shield",
+            "title": "Secure Payments",
+            "description": "Your payment info is always protected with 256-bit SSL encryption."
+          }
+        },
+        "feature_star": {
+          "type": "feature",
+          "settings": {
+            "icon": "star",
+            "title": "Quality Guaranteed",
+            "description": "Every product is curated and tested by our team before it hits the shelves."
+          }
+        }
+      },
+      "block_order": [
+        "feature_truck",
+        "feature_return",
+        "feature_shield",
+        "feature_star"
+      ],
+      "settings": {}
+    },
+    "featured_product_GDPjwQ": {
+      "type": "featured-product",
+      "blocks": {
+        "text_b4FJW3": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "uppercase"
+          }
+        },
+        "title_myVf8c": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h2"
+          }
+        },
+        "price_tkzWQX": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_Hia7je": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_y4VVVq": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_p4QzYW": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_FB8b4M": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_b4FJW3",
+        "title_myVf8c",
+        "price_tkzWQX",
+        "variant_picker_Hia7je",
+        "quantity_selector_y4VVVq",
+        "buy_buttons_p4QzYW",
+        "share_FB8b4M"
+      ],
+      "settings": {
+        "product": "g-box-freeze-dried-fruity-crunch-rolls-candy-tiktok-trend-items-freeze-dried-candy-freeze-dried-strawberries-delightful-crunchy-fruity-flavorful-burst-air-tight-sealed-in-container",
+        "color_scheme": "inverse",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "featured_product_KyKHDK": {
+      "type": "featured-product",
+      "blocks": {
+        "text_CtBY4F": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "uppercase"
+          }
+        },
+        "title_AnAFHV": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h2"
+          }
+        },
+        "price_nJm7VW": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_QxULca": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_CEaWCp": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_LbwwfP": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_iq33nR": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_CtBY4F",
+        "title_AnAFHV",
+        "price_nJm7VW",
+        "variant_picker_QxULca",
+        "quantity_selector_CEaWCp",
+        "buy_buttons_LbwwfP",
+        "share_iq33nR"
+      ],
+      "settings": {
+        "product": "g-box-freeze-dried-chocolate-eclair-ice-cream-bites",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "right",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "featured_product_9YcQWj": {
+      "type": "featured-product",
+      "blocks": {
+        "text_C3bwYN": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_yQ7mGn": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_BW7E8V": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_97AJcV": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_jbMwBk": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_eCr8kh": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_4Mgr4x": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_C3bwYN",
+        "title_yQ7mGn",
+        "price_BW7E8V",
+        "variant_picker_97AJcV",
+        "quantity_selector_jbMwBk",
+        "buy_buttons_eCr8kh",
+        "share_4Mgr4x"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "g-box-freeze-dried-skittles-original-26966",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "slideshow_7McJGW": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_RqErTq": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1_7.png",
+            "image_overlay_opacity": 0,
+            "heading": "Jello like you've never crunched before",
+            "heading_size": "h1",
+            "subheading": "G-Box turns the classic treat into a crispy, fruity delight.",
+            "button_label": "Shop Now",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        },
+        "slide_PNUwzn": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1_39eff597-5368-4e38-a5f0-0b67cbd02388.png",
+            "image_overlay_opacity": 0,
+            "heading": "No stick, all bliss",
+            "heading_size": "h1",
+            "subheading": "<strong>Taffy Puffs turn chewy classics into airy delights.</strong>",
+            "button_label": "Shop Now",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_RqErTq",
+        "slide_PNUwzn"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "grid",
+        "slide_height": "medium",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "tiktok_videos_gbox": {
+      "type": "tiktok-videos",
+      "blocks": {
+        "video_1": {
+          "type": "video",
+          "settings": {
+            "video_url": "",
+            "caption": "Check out our latest drop! 🔥 #gbox #fyp",
+            "likes": "12.4K",
+            "views": "248K",
+            "linked_product": ""
+          }
+        },
+        "video_2": {
+          "type": "video",
+          "settings": {
+            "video_url": "",
+            "caption": "Freeze dried candy is unreal 😱 #freezedried #candy",
+            "likes": "8.2K",
+            "views": "195K",
+            "linked_product": ""
+          }
+        },
+        "video_3": {
+          "type": "video",
+          "settings": {
+            "video_url": "",
+            "caption": "You have to try this! #gboxcandy #tiktokfood",
+            "likes": "15.1K",
+            "views": "312K",
+            "linked_product": ""
+          }
+        },
+        "video_4": {
+          "type": "video",
+          "settings": {
+            "video_url": "",
+            "caption": "New flavors just dropped 🍬 #gbox #candylovers",
+            "likes": "9.8K",
+            "views": "187K",
+            "linked_product": ""
+          }
+        },
+        "video_5": {
+          "type": "video",
+          "settings": {
+            "video_url": "",
+            "caption": "The crunch is everything 💥 #freezedriedcandy",
+            "likes": "11.2K",
+            "views": "224K",
+            "linked_product": ""
+          }
+        },
+        "video_6": {
+          "type": "video",
+          "settings": {
+            "video_url": "",
+            "caption": "Gift this to your bestie 🎁 #gbox #candygift",
+            "likes": "7.6K",
+            "views": "153K",
+            "linked_product": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_1",
+        "video_2",
+        "video_3",
+        "video_4",
+        "video_5",
+        "video_6"
+      ],
+      "settings": {
+        "heading": "Watch Us on TikTok",
+        "subheading": "Real customers, real reviews — follow along for exclusive drops and behind-the-scenes content.",
+        "tiktok_handle": "gboxcandy",
+        "cta_label": "See more on TikTok"
+      }
+    },
+    "rich_text_HTUeD8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WVPVNi": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em><strong>G-BOX Freeze Dried Candy: </strong></em>                      Where sweets meet science",
+            "heading_size": "h0"
+          }
+        },
+        "text_BD9HyN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>G-BOX Freeze Dried Candy brings a delightful twist to your favorite sweets by transforming them into light, crunchy, and irresistibly flavorful treats. Using advanced freeze-drying technology, GBOX removes moisture while locking in the original taste and color, resulting in a unique texture that melts in your mouth. From classic fruity candies to chewy taffies and marshmallows, GBOX offers a fun, airy crunch that candy lovers of all ages can enjoy. Unlike traditional candy, these treats have a longer shelf life and are perfect for snacking on the go, adding to gift baskets, or sharing at parties. Whether you're looking to explore new candy textures or searching for a low-mess alternative to sticky sweets, GBOX Freeze Dried Candy is a game-changer in the world of confections. Indulge in the sweet, crisp experience that’s quickly becoming a favorite among adventurous snackers and sweet tooths alike.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WVPVNi",
+        "text_BD9HyN"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "17723204236c04b30c": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "hero_GwTXnL": {
+      "type": "hero",
+      "name": "Hero",
+      "settings": {
+        "eyebrow": "New Collection",
+        "heading": "<p>Gear Up for <em>Epic</em> Adventures</p>",
+        "subheading": "Discover our latest collection of premium gear built for performance and style.",
+        "cta_primary_label": "Shop Now",
+        "cta_primary_url": "",
+        "cta_secondary_label": "See TikTok Videos",
+        "cta_secondary_url": "",
+        "show_stats": true,
+        "stat_1_value": "50K+",
+        "stat_1_label": "Happy customers",
+        "stat_2_value": "4.9★",
+        "stat_2_label": "Average rating",
+        "stat_3_value": "1M+",
+        "stat_3_label": "TikTok views"
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "hero_GwTXnL",
+    "marquee_ticker_gbox",
+    "featured-collection-0",
+    "features_usp_gbox",
+    "featured_product_GDPjwQ",
+    "featured_product_KyKHDK",
+    "featured_product_9YcQWj",
+    "slideshow_7McJGW",
+    "tiktok_videos_gbox",
+    "rich_text_HTUeD8",
+    "17723204236c04b30c"
+  ]
+}
