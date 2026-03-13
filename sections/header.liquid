@@ -14,8 +14,13 @@
           | image_tag: loading: 'eager', class: 'nav-logo-image', alt: shop.name
         }}
       {%- else -%}
-        {{ shop.name | split: '' | first }}
-        <span class="logo-dot">BOX</span>
+        <img
+          src="{{ 'Gboxlogo3.png' | asset_url }}"
+          alt="{{ shop.name }}"
+          class="nav-logo-image"
+          loading="eager"
+          width="160"
+        >
       {%- endif -%}
       {%- if section.settings.show_tagline -%}
         <div style="margin-left:10px;line-height:1.15">
