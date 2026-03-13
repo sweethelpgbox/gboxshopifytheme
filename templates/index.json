@@ -72,6 +72,7 @@
         "slide_rET3PL",
         "slide_99Rxma"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
@@ -81,6 +82,26 @@
         "image_behavior": "none",
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "hero_GwTXnL": {
+      "type": "hero",
+      "name": "Hero",
+      "settings": {
+        "eyebrow": "New Collection",
+        "heading": "<p>Gear Up for <em>Epic</em> Adventures</p>",
+        "subheading": "Discover our latest collection of premium gear built for performance and style.",
+        "cta_primary_label": "Shop Now",
+        "cta_primary_url": "",
+        "cta_secondary_label": "See TikTok Videos",
+        "cta_secondary_url": "",
+        "show_stats": true,
+        "stat_1_value": "50K+",
+        "stat_1_label": "Happy customers",
+        "stat_2_value": "4.9★",
+        "stat_2_label": "Average rating",
+        "stat_3_value": "1M+",
+        "stat_3_label": "TikTok views"
       }
     },
     "marquee_ticker_gbox": {
@@ -95,6 +116,7 @@
     },
     "featured-collection-0": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection": "top-sellers",
         "products_to_show": 5,
@@ -163,6 +185,7 @@
         "feature_shield",
         "feature_star"
       ],
+      "disabled": true,
       "settings": {}
     },
     "featured_product_GDPjwQ": {
@@ -219,6 +242,7 @@
         "buy_buttons_p4QzYW",
         "share_FB8b4M"
       ],
+      "disabled": true,
       "settings": {
         "product": "g-box-freeze-dried-fruity-crunch-rolls-candy-tiktok-trend-items-freeze-dried-candy-freeze-dried-strawberries-delightful-crunchy-fruity-flavorful-burst-air-tight-sealed-in-container",
         "color_scheme": "inverse",
@@ -288,6 +312,7 @@
         "buy_buttons_LbwwfP",
         "share_iq33nR"
       ],
+      "disabled": true,
       "settings": {
         "product": "g-box-freeze-dried-chocolate-eclair-ice-cream-bites",
         "color_scheme": "background-1",
@@ -357,6 +382,7 @@
         "buy_buttons_eCr8kh",
         "share_4Mgr4x"
       ],
+      "disabled": true,
       "name": "t:sections.featured-product.presets.name",
       "settings": {
         "product": "g-box-freeze-dried-skittles-original-26966",
@@ -541,26 +567,6 @@
     "17723204236c04b30c": {
       "type": "_blocks",
       "settings": {}
-    },
-    "hero_GwTXnL": {
-      "type": "hero",
-      "name": "Hero",
-      "settings": {
-        "eyebrow": "New Collection",
-        "heading": "<p>Gear Up for <em>Epic</em> Adventures</p>",
-        "subheading": "Discover our latest collection of premium gear built for performance and style.",
-        "cta_primary_label": "Shop Now",
-        "cta_primary_url": "",
-        "cta_secondary_label": "See TikTok Videos",
-        "cta_secondary_url": "",
-        "show_stats": true,
-        "stat_1_value": "50K+",
-        "stat_1_label": "Happy customers",
-        "stat_2_value": "4.9★",
-        "stat_2_label": "Average rating",
-        "stat_3_value": "1M+",
-        "stat_3_label": "TikTok views"
-      }
     }
   },
   "order": [
