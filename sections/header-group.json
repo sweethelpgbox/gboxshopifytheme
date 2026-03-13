@@ -14,33 +14,54 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_QBQ4Uw": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "link": ""
+          }
+        },
         "announcement_b8UmhQ": {
           "type": "announcement",
           "settings": {
-            "text": "FREE Shipping on orders $35 or more",
+            "text": "Free Shipping Over $39",
             "link": ""
           }
         }
       },
       "block_order": [
+        "announcement_QBQ4Uw",
         "announcement_b8UmhQ"
       ],
       "settings": {
         "auto_rotate": false,
-        "change_slides_speed": 5,
-        "show_line_separator": true,
-        "show_social": false
+        "change_slides_speed": 3,
+        "color_scheme": "inverse",
+        "show_line_separator": false,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false
       }
     },
     "header": {
       "type": "header",
       "settings": {
+        "logo_height": 48,
+        "show_tagline": true,
+        "company_name": "G-BOX",
+        "tagline": "Freeze Dried Candy",
         "menu": "main-menu"
       }
+    },
+    "blocks_DeKzzm": {
+      "type": "_blocks",
+      "name": "Free shipping progress",
+      "settings": {}
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "blocks_DeKzzm"
   ]
 }
