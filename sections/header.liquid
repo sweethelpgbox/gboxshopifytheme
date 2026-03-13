@@ -1,6 +1,21 @@
 <style>
   .nav-logo-image { height: {{ section.settings.logo_height }}px; }
+  .announcement-bar {
+    background-color: {{ section.settings.announcement_bg_color }};
+    color: {{ section.settings.announcement_text_color }};
+    font-size: {{ section.settings.announcement_font_size }}px;
+    text-align: center;
+    padding: 8px 16px;
+    font-weight: 600;
+    letter-spacing: .04em;
+  }
 </style>
+
+{%- if section.settings.show_announcement and section.settings.announcement_text != blank -%}
+  <div class="announcement-bar" role="region" aria-label="Announcement">
+    {{ section.settings.announcement_text }}
+  </div>
+{%- endif -%}
 
 <header class="site-header" role="banner">
   <div class="container nav-inner">
@@ -123,6 +138,44 @@
       "id": "menu",
       "label": "Navigation menu",
       "default": "main-menu"
+    },
+    {
+      "type": "header",
+      "content": "Announcement Bar"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_announcement",
+      "label": "Show announcement bar",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "announcement_text",
+      "label": "Announcement text",
+      "default": "Free shipping on orders over $50!"
+    },
+    {
+      "type": "color",
+      "id": "announcement_bg_color",
+      "label": "Background color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "announcement_text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "announcement_font_size",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 13
     }
   ]
 }
