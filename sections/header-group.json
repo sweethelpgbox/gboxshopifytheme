@@ -1,1 +1,35 @@
-{"name":"t:sections.header.name","type":"header","sections":{"announcement-bar":{"type":"announcement-bar","blocks":{"announcement_b8UmhQ":{"type":"announcement","settings":{"text":"FREE Shipping on orders $35 or more","link":""}}},"block_order":["announcement_b8UmhQ"],"settings":{"auto_rotate":false,"change_slides_speed":5,"color_scheme":"accent-1","show_line_separator":true,"show_social":false,"enable_country_selector":false,"enable_language_selector":false}},"header":{"type":"header","settings":{"logo_position":"top-center","mobile_logo_position":"center","menu":"main-menu","menu_type_desktop":"dropdown","sticky_header_type":"reduce-logo-size","show_line_separator":false,"color_scheme":"inverse","menu_color_scheme":"inverse","enable_country_selector":true,"enable_language_selector":true,"margin_bottom":0,"padding_top":8,"padding_bottom":0}}},"order":["announcement-bar","header"]}
+{
+  "name": "Header",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_b8UmhQ": {
+          "type": "announcement",
+          "settings": {
+            "text": "FREE Shipping on orders $35 or more",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["announcement_b8UmhQ"],
+      "settings": {
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_line_separator": true,
+        "show_social": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_height": 48,
+        "show_tagline": true,
+        "tagline": "Freeze Dried Candy",
+        "menu": "main-menu"
+      }
+    }
+  },
+  "order": ["announcement-bar", "header"]
+}
