@@ -567,12 +567,97 @@
     "17723204236c04b30c": {
       "type": "_blocks",
       "settings": {}
+    },
+    "shop_by_vibe_8i3pfx": {
+      "type": "shop-by-vibe",
+      "blocks": {
+        "vibe_card_r8XqxA": {
+          "type": "vibe_card",
+          "settings": {
+            "emoji": "🌈",
+            "title": "Rainbow Rush",
+            "subtitle": "Frettles & mixed flavors",
+            "gradient": "linear-gradient(160deg, #43a047 0%, #ffee58 30%, #ffa726 50%, #42a5f5 75%, #7e57c2 100%)",
+            "link": ""
+          }
+        },
+        "vibe_card_bpbARe": {
+          "type": "vibe_card",
+          "settings": {
+            "emoji": "🌶️",
+            "title": "Spicy Red",
+            "subtitle": "Chamoy & Tajin Frettles",
+            "gradient": "linear-gradient(170deg, #e53935 0%, #b71c1c 100%)",
+            "link": ""
+          }
+        },
+        "vibe_card_XeXVGp": {
+          "type": "vibe_card",
+          "settings": {
+            "emoji": "🍦",
+            "title": "Creamy Dream",
+            "subtitle": "Astronaut ice cream bites",
+            "gradient": "linear-gradient(170deg, #f5deb3 0%, #c8a97e 100%)",
+            "link": ""
+          }
+        },
+        "vibe_card_fTaBx6": {
+          "type": "vibe_card",
+          "settings": {
+            "emoji": "☁️",
+            "title": "Cloud Soft",
+            "subtitle": "Taffy puffs & marshmallows",
+            "gradient": "linear-gradient(170deg, #b3e5fc 0%, #80c8e8 100%)",
+            "link": ""
+          }
+        },
+        "vibe_card_RcE7ww": {
+          "type": "vibe_card",
+          "settings": {
+            "emoji": "🍋",
+            "title": "Citrus Burst",
+            "subtitle": "Lemon, peach & pineapple",
+            "gradient": "linear-gradient(170deg, #ffd740 0%, #ff8f00 100%)",
+            "link": ""
+          }
+        },
+        "vibe_card_q4tzkd": {
+          "type": "vibe_card",
+          "settings": {
+            "emoji": "🍇",
+            "title": "Wild Berry",
+            "subtitle": "Berry & tropical Frettles",
+            "gradient": "linear-gradient(135deg, #7b1fa2 0%, #e91e8c 100%)",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "vibe_card_r8XqxA",
+        "vibe_card_bpbARe",
+        "vibe_card_XeXVGp",
+        "vibe_card_fTaBx6",
+        "vibe_card_RcE7ww",
+        "vibe_card_q4tzkd"
+      ],
+      "name": "Shop by Vibe",
+      "settings": {
+        "badge_emoji": "🤙",
+        "badge_text": "SHOP BY VIBE",
+        "heading": "Find Your",
+        "heading_highlight": "Flavor Mood",
+        "heading_highlight_color": "#2a7c2a",
+        "subheading": "Pick a vibe, crunch accordingly.",
+        "badge_bg": "#2a7c2a",
+        "badge_text_color": "#ffffff"
+      }
     }
   },
   "order": [
     "slideshow",
     "hero_GwTXnL",
     "marquee_ticker_gbox",
+    "shop_by_vibe_8i3pfx",
     "featured-collection-0",
     "features_usp_gbox",
     "featured_product_GDPjwQ",
