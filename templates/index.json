@@ -111,7 +111,7 @@
         "text_2": "Easy 30-Day Returns",
         "text_3": "Trending on TikTok",
         "text_4": "New Drops Weekly",
-        "speed": 25
+        "speed": 50
       }
     },
     "shop_by_vibe_8i3pfx": {
@@ -647,10 +647,6 @@
         "padding_top": 4,
         "padding_bottom": 4
       }
-    },
-    "17723204236c04b30c": {
-      "type": "_blocks",
-      "settings": {}
     }
   },
   "order": [
@@ -665,7 +661,6 @@
     "featured_product_9YcQWj",
     "slideshow_7McJGW",
     "tiktok_videos_gbox",
-    "rich_text_HTUeD8",
-    "17723204236c04b30c"
+    "rich_text_HTUeD8"
   ]
 }
