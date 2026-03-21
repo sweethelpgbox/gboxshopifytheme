@@ -1,0 +1,588 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+
+{%- unless section.settings.quick_add == 'none' -%}
+  {{ 'quick-add.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{%- endunless -%}
+
+{%- if section.settings.quick_add == 'standard' -%}
+  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .bestselling-flavors-{{ section.id }} .bsf-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    margin-bottom: 3rem;
+  }
+
+  .bestselling-flavors-{{ section.id }} .bsf-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: {{ section.settings.badge_color }};
+    color: {{ section.settings.badge_text_color }};
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.5rem 1.2rem;
+    border-radius: 10rem;
+    margin-bottom: 1rem;
+  }
+
+  .bestselling-flavors-{{ section.id }} .bsf-heading-group {
+    flex: 1 1 auto;
+  }
+
+  .bestselling-flavors-{{ section.id }} .bsf-title {
+    font-size: clamp(2.8rem, 4vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 0.8rem;
+  }
+
+  .bestselling-flavors-{{ section.id }} .bsf-title-highlight {
+    color: {{ section.settings.heading_accent_color }};
+  }
+
+  .bestselling-flavors-{{ section.id }} .bsf-description {
+    font-size: 1.5rem;
+    color: rgba(var(--color-foreground), 0.7);
+    margin: 0;
+  }
+
+  .bestselling-flavors-{{ section.id }} .bsf-view-all {
+    flex-shrink: 0;
+    align-self: flex-end;
+  }
+
+  .bestselling-flavors-{{ section.id }} .bsf-category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.6rem;
+    margin-top: 3.2rem;
+  }
+
+  @media screen and (max-width: 989px) {
+    .bestselling-flavors-{{ section.id }} .bsf-category-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .bestselling-flavors-{{ section.id }} .bsf-category-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bestselling-flavors-{{ section.id }} .bsf-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .bestselling-flavors-{{ section.id }} .bsf-category-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2.4rem 1.6rem;
+    background: rgba(var(--color-foreground), 0.04);
+    border-radius: var(--product-card-corner-radius, 1.8rem);
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s ease;
+  }
+
+  .bestselling-flavors-{{ section.id }} .bsf-category-tile:hover {
+    background: rgba(var(--color-foreground), 0.08);
+  }
+
+  .bestselling-flavors-{{ section.id }} .bsf-category-icon {
+    font-size: 3.6rem;
+    line-height: 1;
+    margin-bottom: 1.2rem;
+  }
+
+  .bestselling-flavors-{{ section.id }} .bsf-category-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0.4rem;
+  }
+
+  .bestselling-flavors-{{ section.id }} .bsf-category-subtitle {
+    font-size: 1.3rem;
+    color: rgba(var(--color-foreground), 0.6);
+    margin: 0;
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign products_to_display = section.settings.collection.all_products_count
+  if section.settings.collection.all_products_count > section.settings.products_to_show
+    assign products_to_display = section.settings.products_to_show
+    assign more_in_collection = true
+  endif
+  assign columns_desktop_int = section.settings.columns_desktop | plus: 0
+  assign category_blocks = section.blocks | where: 'type', 'category_tile'
+-%}
+
+<div class="color-{{ section.settings.color_scheme }} isolate gradient">
+  <div class="bestselling-flavors-{{ section.id }} page-width section-{{ section.id }}-padding">
+
+    {%- comment -%} Header {%- endcomment -%}
+    <div class="bsf-header">
+      <div class="bsf-heading-group">
+        {%- if section.settings.badge_text != blank -%}
+          <div class="bsf-badge{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            {%- if section.settings.badge_icon != blank -%}
+              <span aria-hidden="true">{{ section.settings.badge_icon }}</span>
+            {%- endif -%}
+            {{ section.settings.badge_text }}
+          </div>
+        {%- endif -%}
+        {%- if section.settings.title != blank or section.settings.title_highlight != blank -%}
+          <h2 class="bsf-title{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            {{ section.settings.title }}
+            {%- if section.settings.title_highlight != blank -%}
+              <span class="bsf-title-highlight">{{ section.settings.title_highlight }}</span>
+            {%- endif -%}
+          </h2>
+        {%- endif -%}
+        {%- if section.settings.description != blank -%}
+          <p class="bsf-description{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            {{ section.settings.description }}
+          </p>
+        {%- endif -%}
+      </div>
+
+      {%- if section.settings.show_view_all and section.settings.collection != blank -%}
+        <div class="bsf-view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+          <a
+            href="{{ section.settings.collection.url }}"
+            class="button button--secondary"
+          >
+            {{ section.settings.view_all_label | default: 'View all products' }}
+          </a>
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- comment -%} Product Grid {%- endcomment -%}
+    <ul
+      class="grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop grid--2-col-tablet-down"
+      role="list"
+    >
+      {% assign skip_card_product_styles = false %}
+      {%- if section.settings.collection.products.size > 0 -%}
+        {% assign lazy_load = false %}
+        {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+          {% if lazy_load == false and forloop.index > columns_desktop_int %}
+            {% assign lazy_load = true %}
+          {% endif %}
+          <li
+            id="Slide-{{ section.id }}-{{ forloop.index }}"
+            class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            {% render 'card-product',
+              card_product: product,
+              media_aspect_ratio: section.settings.image_ratio,
+              image_shape: section.settings.image_shape,
+              lazy_load: lazy_load,
+              show_secondary_image: section.settings.show_secondary_image,
+              show_vendor: section.settings.show_vendor,
+              show_rating: section.settings.show_rating,
+              skip_styles: skip_card_product_styles,
+              section_id: section.id,
+              quick_add: section.settings.quick_add
+            %}
+          </li>
+          {%- assign skip_card_product_styles = true -%}
+        {%- endfor -%}
+      {%- else -%}
+        {%- for i in (1..section.settings.columns_desktop) -%}
+          <li
+            class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            {%- assign placeholder_image = 'product-apparel-' | append: forloop.index -%}
+            {% render 'card-product',
+              show_vendor: section.settings.show_vendor,
+              media_aspect_ratio: section.settings.image_ratio,
+              image_shape: section.settings.image_shape,
+              lazy_load: false,
+              placeholder_image: placeholder_image
+            %}
+          </li>
+        {%- endfor -%}
+      {%- endif -%}
+    </ul>
+
+    {%- comment -%} Category Tiles {%- endcomment -%}
+    {%- if category_blocks.size > 0 -%}
+      <div class="bsf-category-grid">
+        {%- for block in category_blocks -%}
+          {%- if block.settings.link != blank -%}
+            <a
+              href="{{ block.settings.link }}"
+              class="bsf-category-tile{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {{ block.shopify_attributes }}
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
+          {%- else -%}
+            <div
+              class="bsf-category-tile{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {{ block.shopify_attributes }}
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
+          {%- endif -%}
+            {%- if block.settings.icon != blank -%}
+              <div class="bsf-category-icon" aria-hidden="true">{{ block.settings.icon }}</div>
+            {%- endif -%}
+            {%- if block.settings.title != blank -%}
+              <p class="bsf-category-title">{{ block.settings.title }}</p>
+            {%- endif -%}
+            {%- if block.settings.subtitle != blank -%}
+              <p class="bsf-category-subtitle">{{ block.settings.subtitle }}</p>
+            {%- endif -%}
+          {%- if block.settings.link != blank -%}
+            </a>
+          {%- else -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Bestselling Flavors",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Badge"
+    },
+    {
+      "type": "text",
+      "id": "badge_icon",
+      "label": "Badge icon (emoji)",
+      "default": "🌿"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge text",
+      "default": "Fan Favorites"
+    },
+    {
+      "type": "color",
+      "id": "badge_color",
+      "label": "Badge background color",
+      "default": "#1a7a4a"
+    },
+    {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "Badge text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Bestselling"
+    },
+    {
+      "type": "text",
+      "id": "title_highlight",
+      "label": "Heading accent word",
+      "default": "Flavors"
+    },
+    {
+      "type": "color",
+      "id": "heading_accent_color",
+      "label": "Accent color",
+      "default": "#1a7a4a"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "As seen on TikTok \u2014 freeze-dried and gone in seconds."
+    },
+    {
+      "type": "header",
+      "content": "View all button"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "label": "Show \"View all\" button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "view_all_label",
+      "label": "Button label",
+      "default": "View all products"
+    },
+    {
+      "type": "header",
+      "content": "Collection"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 4,
+      "label": "Products to show"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "default": 4,
+      "label": "Number of columns on desktop"
+    },
+    {
+      "type": "header",
+      "content": "Product card"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "Adapt to image"
+        },
+        {
+          "value": "portrait",
+          "label": "Portrait"
+        },
+        {
+          "value": "square",
+          "label": "Square"
+        }
+      ],
+      "default": "square",
+      "label": "Image ratio"
+    },
+    {
+      "type": "select",
+      "id": "image_shape",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default"
+        },
+        {
+          "value": "arch",
+          "label": "Arch"
+        },
+        {
+          "value": "blob",
+          "label": "Blob"
+        },
+        {
+          "value": "round",
+          "label": "Round"
+        }
+      ],
+      "default": "default",
+      "label": "Image shape"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "default": false,
+      "label": "Show second image on hover"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "default": true,
+      "label": "Show vendor"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "default": false,
+      "label": "Show product rating"
+    },
+    {
+      "type": "select",
+      "id": "quick_add",
+      "default": "none",
+      "label": "Quick add",
+      "options": [
+        {
+          "value": "none",
+          "label": "No quick add"
+        },
+        {
+          "value": "standard",
+          "label": "Standard"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Color scheme"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "info": "t:sections.all.colors.has_cards_info",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category_tile",
+      "name": "Category tile",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (emoji)",
+          "default": "🍬"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Freeze Dried Candy"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Frettles, Peach Rings & more"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bestselling Flavors",
+      "blocks": [
+        {
+          "type": "category_tile",
+          "settings": {
+            "icon": "🍬",
+            "title": "Freeze Dried Candy",
+            "subtitle": "Frettles, Peach Rings & more"
+          }
+        },
+        {
+          "type": "category_tile",
+          "settings": {
+            "icon": "🍦",
+            "title": "Freeze Dried Ice Cream",
+            "subtitle": "Astronaut-style ice cream bites"
+          }
+        },
+        {
+          "type": "category_tile",
+          "settings": {
+            "icon": "☁️",
+            "title": "Taffy Puffs",
+            "subtitle": "Peppermint, Banana, Cotton Candy"
+          }
+        },
+        {
+          "type": "category_tile",
+          "settings": {
+            "icon": "📦",
+            "title": "Monthly Box",
+            "subtitle": "10 unique containers / month"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
