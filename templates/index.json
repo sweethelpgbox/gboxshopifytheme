@@ -625,7 +625,7 @@
           "type": "heading",
           "settings": {
             "heading": "<em><strong>G-BOX Freeze Dried Candy: </strong></em>                      Where sweets meet science",
-            "heading_size": "h0"
+            "heading_size": "h2"
           }
         },
         "text_BD9HyN": {
@@ -644,8 +644,8 @@
         "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     },
     "17723204236c04b30c": {
